@@ -4,8 +4,8 @@
   "description": "Gestionnaire d'API de Valorant",
   "main": "index.js",
   "scripts": {
-	"prestart": "npm install",
-	"start": "node index.js"
+    "prestart": "npm install",
+    "start": "node index.js"
   },
   "keywords": [
     "swagger"
@@ -14,7 +14,13 @@
   "private": true,
   "dependencies": {
     "connect": "^3.2.0",
+    "core-js": "^3.23.4",
+    "formidable": "^3.5.1",
     "js-yaml": "^3.3.0",
-    "oas3-tools": "^2.2.3"
+    "oas3-tools": "^2.2.3",
+    "superagent": "^7.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
