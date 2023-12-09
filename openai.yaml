@@ -1,0 +1,556 @@
+openapi: 3.0.2
+info:
+  version: 1.0.0
+  title: API Valorant
+  description: API gestion de Valorant
+
+paths:
+  /:
+    get:
+      tags:
+        - Valorant
+      summary: Liste les informations de Valorant
+      parameters: [ ]
+      responses:
+        "200":
+          description: Valorant est retourné.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Valorant'
+  /joueurs/:
+    get:
+      tags:
+        - Joueurs
+      summary: Liste tous les joueurs.
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/pageParam'
+      responses:
+        "200":
+          description: Une collection de numéros de joueur est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+    post:
+      tags:
+        - Joueurs
+      summary: Ajoute un nouveau joueur.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Joueur'
+      responses:
+        "200":
+          description: Le joueur a correctement été ajouté.
+  /joueurs/{id}/:
+    get:
+      tags:
+        - Joueurs
+      summary: Liste les informations d'un joueur en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant du joueur.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Un unique joueur est retourné.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joueur'
+        "404":
+          description: L'identifiant ne correspond à aucun joueur.
+    put:
+      tags:
+        - Joueurs
+      summary: Met à jour les informations du joueur.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant du joueur.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Joueur'
+      responses:
+        "200":
+          description: Les informations du joueur ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucun joueur.
+    delete:
+      tags:
+        - Joueurs
+      summary: Supprime un joueur en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant du joueur.
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Le joueur a été supprimé avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucun joueur.
+
+  /armes/:
+    get:
+      tags:
+        - Armes
+      summary: Liste toutes les armes.
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/pageParam'
+      responses:
+        "200":
+          description: Une collection d'armes est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+    post:
+      tags:
+        - Armes
+      summary: Ajoute une nouvelle arme.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Arme'
+      responses:
+        "200":
+          description: L'arme a correctement été ajoutée.
+
+  /armes/{id}/:
+    get:
+      tags:
+        - Armes
+      summary: Liste les informations d'une arme en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de l'arme.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Une unique arme est retournée.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Arme'
+        "404":
+          description: L'identifiant ne correspond à aucune arme.
+    put:
+      tags:
+        - Armes
+      summary: Met à jour les informations de l'arme
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de l'arme.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Arme'
+      responses:
+        "200":
+          description: Les informations de l'arme ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune arme.
+    delete:
+      tags:
+        - Armes
+      summary: Supprime une arme en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de l'arme.
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: L'arme a été supprimé avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucune arme.
+  /armes/{id}/skins/:
+    get:
+      tags:
+        - Skins
+      summary: Liste tous les skins d'une arme.
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/pageParam'
+      responses:
+        "200":
+          description: Une collection de skins est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+    post:
+      tags:
+        - Skins
+      summary: Ajoute un nouveau skin à une arme.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Skin'
+      responses:
+        "200":
+          description: Le skin a correctement été ajoutée.
+
+
+  /skins/:
+    get:
+      tags:
+        - Skins
+      summary: Liste tous les skins.
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/pageParam'
+      responses:
+        "200":
+          description: Une collection de skins est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+    post:
+      tags:
+        - Skins
+      summary: Ajoute un nouveau skin.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Skin'
+      responses:
+        "200":
+          description: Le skin a correctement été ajouté.
+
+  /skins/{id}/:
+    get:
+      tags:
+        - Skins
+      summary: Liste les informations d'un skin en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant du skin.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Un unique skin est retourné.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Skin'
+        "404":
+          description: L'identifiant ne correspond à aucun skin.
+
+  /maps/:
+    get:
+      tags:
+        - Maps
+      summary: Liste toutes les maps.
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/pageParam'
+      responses:
+        "200":
+          description: Une collection de maps est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+    post:
+      tags:
+        - Maps
+      summary: Ajoute une nouvelle map.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Map'
+      responses:
+        "200":
+          description: La map a correctement été ajoutée.
+
+  /maps/{id}/:
+    get:
+      tags:
+        - Maps
+      summary: Liste les informations d'une map en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de la map.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Une unique map est retournée.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+
+  /agents/:
+    get:
+      tags:
+        - Agents
+      summary: Liste tous les agents.
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/pageParam'
+      responses:
+        "200":
+          description: Une collection d'agents est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+    post:
+      tags:
+        - Agents
+      summary: Ajoute un nouvel agent.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        "200":
+          description: L'agent a correctement été ajouté.
+
+  /agents/{id}/:
+    get:
+      tags:
+        - Agents
+      summary: Liste les informations d'un agent en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de l'agent.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Un unique agent est retourné.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+
+  /competences/:
+    get:
+      tags:
+        - Competences
+      summary: Liste toutes les compétences.
+      parameters:
+        - $ref: '#/components/parameters/limitParam'
+        - $ref: '#/components/parameters/pageParam'
+      responses:
+        "200":
+          description: Une collection de compétences est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+    post:
+      tags:
+        - Competences
+      summary: Ajoute une nouvelle compétence.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Competence'
+      responses:
+        "200":
+          description: La compétence a correctement été ajoutée.
+
+  /competences/{id}/:
+    get:
+      tags:
+        - Competences
+      summary: Liste les informations d'une compétence en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de la compétence.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Une unique compétence est retournée.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Competence'
+        "404":
+          description: L'identifiant ne correspond à aucune compétence.
+
+components:
+  schemas:
+    Valorant:
+      type: object
+      properties:
+        nom:
+          type: string
+        dateCreation:
+          type: string
+        modeDeJeu:
+          type: string
+        editeur:
+          type: string
+        plateforme:
+          type: string
+        joueurs:
+          type: array
+        maps:
+          type: array
+        agents:
+          type: array
+        armes:
+          type: array
+    Joueur:
+      type: object
+      properties:
+        id:
+          type: string
+        pseudo:
+          type: string
+        niveau:
+          type: string
+        rank:
+          type: string
+        dateCreationCompte:
+          type: string
+        agentSelectionneId:
+          type: string
+        mapSelectionneeId:
+          type: string
+        ArmeSelectionneeId:
+          type: string
+    Arme:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        type:
+          type: string
+        prix:
+          type: number
+        skins:
+          type: array
+    Skin:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        prix:
+          type: number
+        armeId:
+          type: string
+    Map:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        lieu:
+          type: string
+        type:
+          type: string
+        orbesDeCompetence:
+          type: array
+    Competence:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        description:
+          type: string
+    Agent:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        type:
+          type: string
+        competence:
+          type: array
+  parameters:
+    pageParam:
+      name: page
+      in: query
+      description: Nombre d'elements à sauter avant de retourner le resultat.
+      required: false
+      schema:
+        minimum: 0
+        type: integer
+        format: int32
+        default: 0
+    limitParam:
+      name: limit
+      in: query
+      description: Nombre maximum d'éléments à retourner.
+      required: false
+      schema:
+        maximum: 100
+        minimum: 1
+        type: integer
+        format: int32
+        default: 20

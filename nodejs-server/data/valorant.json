@@ -1,0 +1,227 @@
+{
+  "informations": {
+    "nom": "Valorant",
+    "dateCreation": "2020-06-02",
+    "modeDeJeu": "Tireur tactique à la première personne",
+    "editeur": "Riot Games",
+    "plateforme": "PC"
+  },
+  "joueurs": [
+    {
+      "id": "2",
+      "pseudo": "Player2",
+      "niveau": "15",
+      "rank": "Platinum",
+      "agentSelectionneId": "1",
+      "mapSelectionneeId": "1",
+      "armeSelectionneeId": "1"
+    },
+    {
+      "id": "3",
+      "pseudo": "Player3",
+      "niveau": "8",
+      "rank": "Silver",
+      "agentSelectionneId": "2",
+      "mapSelectionneeId": "2",
+      "armeSelectionneeId": "2"
+    },
+    {
+      "id": "1",
+      "pseudo": "Player1",
+      "niveau": "20",
+      "rank": "Gold",
+      "agentSelectionneId": "3",
+      "mapSelectionneeId": "2",
+      "armeSelectionneeId": "2"
+    }
+  ],
+  "armes": [
+    {
+      "id": "1",
+      "nom": "Vandal",
+      "type": "Rifle",
+      "prix": 2900,
+      "skins": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "id": "2",
+      "nom": "Phantom",
+      "type": "Rifle",
+      "prix": 2800,
+      "skins": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "id": "3",
+      "nom": "Sheriff",
+      "type": "Pistol",
+      "prix": 800,
+      "skins": [
+        "5",
+        "6"
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "id": "1",
+      "nom": "Valorant Red",
+      "prix": 500,
+      "armeId": "1"
+    },
+    {
+      "id": "2",
+      "nom": "Ghostly Blue",
+      "prix": 450,
+      "armeId": "2"
+    },
+    {
+      "id": "3",
+      "nom": "Dragonfire",
+      "prix": 600,
+      "armeId": "1"
+    },
+    {
+      "id": "4",
+      "nom": "Revenant",
+      "prix": 550,
+      "armeId": "2"
+    },
+    {
+      "id": "5",
+      "nom": "Golden Age",
+      "prix": 700,
+      "armeId": "3"
+    },
+    {
+      "id": "6",
+      "nom": "Rogue",
+      "prix": 650,
+      "armeId": "3"
+    }
+  ],
+  "maps": [
+    {
+      "id": "1",
+      "nom": "Bind",
+      "lieu": "Morocco",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "4",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "id": "2",
+      "nom": "Haven",
+      "lieu": "Greece",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "3",
+      "nom": "Split",
+      "lieu": "Japan",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "5",
+        "8"
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "id": "1",
+      "nom": "Jett",
+      "type": "Duelist",
+      "competences": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": "2",
+      "nom": "Sage",
+      "type": "Sentinel",
+      "competences": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "id": "3",
+      "nom": "Phoenix",
+      "type": "Duelist",
+      "competences": [
+        "8",
+        "9",
+        "10"
+      ]
+    }
+  ],
+  "competences": [
+    {
+      "id": "1",
+      "nom": "Tailwind",
+      "description": "Permet à Jett de se déplacer rapidement vers la direction regardée."
+    },
+    {
+      "id": "2",
+      "nom": "Cloudburst",
+      "description": "Jett lance une boule de fumée qui éclate en une brève vision obstruée lorsqu'elle atteint le sol."
+    },
+    {
+      "id": "3",
+      "nom": "Updraft",
+      "description": "Jett propulse vers le haut dans les airs."
+    },
+    {
+      "id": "4",
+      "nom": "Blade storm",
+      "description": "Armez-vous de plusieurs couteaux de lancer qui font des dégâts modérés et tuent en Headshot."
+    },
+    {
+      "id": "5",
+      "nom": "Barrier Orb",
+      "description": "Sage crée une barrière solide qui peut être placée sur le terrain."
+    },
+    {
+      "id": "6",
+      "nom": "Healing Orb",
+      "description": "Sage lance un orbe qui soigne les alliés proches au fil du temps."
+    },
+    {
+      "id": "7",
+      "nom": "Resurrection",
+      "description": "Sage peut ressusciter un allié récemment éliminé."
+    },
+    {
+      "id": "8",
+      "nom": "Blaze",
+      "description": "Phoenix lance un orbe qui se transforme en un mur de feu courbé lorsqu'il touche le sol."
+    },
+    {
+      "id": "9",
+      "nom": "Curveball",
+      "description": "Phoenix lance un éclair courbé qui aveugle tous les regardant dans son champ de vision."
+    },
+    {
+      "id": "10",
+      "nom": "Run It Back",
+      "description": "Phoenix entre en état d'immortalité, pouvant explorer librement et réapparaître à l'emplacement initial en cas d'élimination."
+    }
+  ]
+}

@@ -1,0 +1,1118 @@
+openapi: 3.0.2
+info:
+  title: API Valorant
+  description: Gestionnaire d'API de Valorant
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /:
+    get:
+      tags:
+      - Valorant
+      summary: Liste les informations de Valorant
+      operationId: rootGET
+      parameters: []
+      responses:
+        "200":
+          description: Valorant est retourné.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Valorant'
+      x-swagger-router-controller: Valorant
+  /joueurs/:
+    get:
+      tags:
+      - Joueurs
+      summary: Liste tous les joueurs.
+      operationId: joueursGET
+      parameters:
+      - name: limit
+        in: query
+        description: Nombre maximum d'éléments à retourner.
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          format: int32
+          default: 20
+      - name: page
+        in: query
+        description: Nombre d'elements à sauter avant de retourner le resultat.
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+          default: 0
+      responses:
+        "200":
+          description: Une collection de numéros de joueur est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+      x-swagger-router-controller: Joueurs
+    post:
+      tags:
+      - Joueurs
+      summary: Ajoute un nouveau joueur.
+      operationId: joueursPOST
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Joueur'
+      responses:
+        "200":
+          description: Le joueur a correctement été ajouté.
+      x-swagger-router-controller: Joueurs
+  /joueurs/{id}/:
+    get:
+      tags:
+      - Joueurs
+      summary: Liste les informations d'un joueur en fonction de son identifiant.
+      operationId: joueursIdGET
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant du joueur.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Un unique joueur est retourné.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joueur'
+        "404":
+          description: L'identifiant ne correspond à aucun joueur.
+      x-swagger-router-controller: Joueurs
+    put:
+      tags:
+      - Joueurs
+      summary: Met à jour les informations du joueur.
+      operationId: joueursIdPUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant du joueur.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Joueur'
+      responses:
+        "200":
+          description: Les informations du joueur ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucun joueur.
+      x-swagger-router-controller: Joueurs
+    delete:
+      tags:
+      - Joueurs
+      summary: Supprime un joueur en fonction de son identifiant.
+      operationId: joueursIdDELETE
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant du joueur.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Le joueur a été supprimé avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucun joueur.
+      x-swagger-router-controller: Joueurs
+  /armes/:
+    get:
+      tags:
+      - Armes
+      summary: Liste toutes les armes.
+      operationId: armesGET
+      parameters:
+      - name: limit
+        in: query
+        description: Nombre maximum d'éléments à retourner.
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          format: int32
+          default: 20
+      - name: page
+        in: query
+        description: Nombre d'elements à sauter avant de retourner le resultat.
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+          default: 0
+      responses:
+        "200":
+          description: Une collection d'armes est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+      x-swagger-router-controller: Armes
+    post:
+      tags:
+      - Armes
+      summary: Ajoute une nouvelle arme.
+      operationId: armesPOST
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Arme'
+      responses:
+        "200":
+          description: L'arme a correctement été ajoutée.
+      x-swagger-router-controller: Armes
+  /armes/{id}/:
+    get:
+      tags:
+      - Armes
+      summary: Liste les informations d'une arme en fonction de son identifiant.
+      operationId: armesIdGET
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de l'arme.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Une unique arme est retournée.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Arme'
+        "404":
+          description: L'identifiant ne correspond à aucune arme.
+      x-swagger-router-controller: Armes
+    put:
+      tags:
+      - Armes
+      summary: Met à jour les informations de l'arme.
+      operationId: armesIdPUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de l'arme.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Arme'
+      responses:
+        "200":
+          description: Les informations de l'arme ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune arme.
+      x-swagger-router-controller: Armes
+    delete:
+      tags:
+      - Armes
+      summary: Supprime une arme en fonction de son identifiant.
+      operationId: armesIdDELETE
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de l'arme.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: L'arme a été supprimé avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucune arme.
+      x-swagger-router-controller: Armes
+  /armes/{id}/skins/:
+    get:
+      tags:
+      - Skins
+      summary: Liste tous les skins d'une arme.
+      operationId: armesIdSkinsGET
+      parameters:
+      - name: limit
+        in: query
+        description: Nombre maximum d'éléments à retourner.
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          format: int32
+          default: 20
+      - name: page
+        in: query
+        description: Nombre d'elements à sauter avant de retourner le resultat.
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+          default: 0
+      responses:
+        "200":
+          description: Une collection de skins est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+      x-swagger-router-controller: Skins
+    put:
+      tags:
+      - Skins
+      summary: Met à jour les skins d'une arme.
+      operationId: armesIdSkinsPUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant d'une arme.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Une collection d'identifiant de skins.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+      responses:
+        "200":
+          description: La liste des skins d'une arme a été mise à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune arme.
+      x-swagger-router-controller: Skins
+  /skins/:
+    get:
+      tags:
+      - Skins
+      summary: Liste tous les skins.
+      operationId: skinsGET
+      parameters:
+      - name: limit
+        in: query
+        description: Nombre maximum d'éléments à retourner.
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          format: int32
+          default: 20
+      - name: page
+        in: query
+        description: Nombre d'elements à sauter avant de retourner le resultat.
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+          default: 0
+      responses:
+        "200":
+          description: Une collection de skins est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+      x-swagger-router-controller: Skins
+    post:
+      tags:
+      - Skins
+      summary: Ajoute un nouveau skin.
+      operationId: skinsPOST
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Skin'
+      responses:
+        "200":
+          description: Le skin a correctement été ajouté.
+      x-swagger-router-controller: Skins
+  /skins/{id}/:
+    get:
+      tags:
+      - Skins
+      summary: Liste les informations d'un skin en fonction de son identifiant.
+      operationId: skinsIdGET
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant du skin.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Un unique skin est retourné.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Skin'
+        "404":
+          description: L'identifiant ne correspond à aucun skin.
+      x-swagger-router-controller: Skins
+    put:
+      tags:
+      - Skins
+      summary: Met à jour les informations d'un skin en fonction de son identifiant.
+      operationId: skinsIdPUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant du skin.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Skin'
+      responses:
+        "200":
+          description: Les informations du skin ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucun skin.
+      x-swagger-router-controller: Skins
+    delete:
+      tags:
+      - Skins
+      summary: Supprime un skin en fonction de son identifiant.
+      operationId: skinsIdDELETE
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant du skin.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Le skin a été supprimé avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucun skin.
+      x-swagger-router-controller: Skins
+  /maps/:
+    get:
+      tags:
+      - Maps
+      summary: Liste toutes les maps.
+      operationId: mapsGET
+      parameters:
+      - name: limit
+        in: query
+        description: Nombre maximum d'éléments à retourner.
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          format: int32
+          default: 20
+      - name: page
+        in: query
+        description: Nombre d'elements à sauter avant de retourner le resultat.
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+          default: 0
+      responses:
+        "200":
+          description: Une collection de maps est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+      x-swagger-router-controller: Maps
+    post:
+      tags:
+      - Maps
+      summary: Ajoute une nouvelle map.
+      operationId: mapsPOST
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Map'
+      responses:
+        "200":
+          description: La map a correctement été ajoutée.
+      x-swagger-router-controller: Maps
+  /maps/{id}/:
+    get:
+      tags:
+      - Maps
+      summary: Liste les informations d'une map en fonction de son identifiant.
+      operationId: mapsIdGET
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de la map.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Une unique map est retournée.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Map'
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+      x-swagger-router-controller: Maps
+    put:
+      tags:
+      - Maps
+      summary: Met à jour les informations d'une map en fonction de son identifiant.
+      operationId: mapsIdPUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de la map.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Map'
+      responses:
+        "200":
+          description: Les informations de la map ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+      x-swagger-router-controller: Maps
+    delete:
+      tags:
+      - Maps
+      summary: Supprime une map en fonction de son identifiant.
+      operationId: mapsIdDELETE
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de la map.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: La map a été supprimée avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+      x-swagger-router-controller: Maps
+  /maps/{id}/orbes_competence:
+    get:
+      tags:
+      - Maps
+      summary: Liste les orbes de compétence d'une map en fonction de son identifiant.
+      operationId: mapsIdOrbes_competenceGET
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de la map.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Une collection d'orbes de compétence est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Competence'
+                x-content-type: application/json
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+      x-swagger-router-controller: Maps
+    put:
+      tags:
+      - Maps
+      summary: Met à jour les orbes de compétence d'une map en fonction de son identifiant.
+      operationId: mapsIdOrbes_competencePUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de la map.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Une collection d'identifiant d'orbes de compétence.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+      responses:
+        "200":
+          description: Les orbes de compétence de la map ont été correctement mis
+            à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+      x-swagger-router-controller: Maps
+  /agents/:
+    get:
+      tags:
+      - Agents
+      summary: Liste tous les agents.
+      operationId: agentsGET
+      parameters:
+      - name: limit
+        in: query
+        description: Nombre maximum d'éléments à retourner.
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          format: int32
+          default: 20
+      - name: page
+        in: query
+        description: Nombre d'elements à sauter avant de retourner le resultat.
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+          default: 0
+      responses:
+        "200":
+          description: Une collection d'agents est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+      x-swagger-router-controller: Agents
+    post:
+      tags:
+      - Agents
+      summary: Ajoute un nouvel agent.
+      operationId: agentsPOST
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        "200":
+          description: L'agent a correctement été ajouté.
+      x-swagger-router-controller: Agents
+  /agents/{id}/:
+    get:
+      tags:
+      - Agents
+      summary: Liste les informations d'un agent en fonction de son identifiant.
+      operationId: agentsIdGET
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de l'agent.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Un unique agent est retourné.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+      x-swagger-router-controller: Agents
+    put:
+      tags:
+      - Agents
+      summary: Met à jour les informations d'un agent en fonction de son identifiant.
+      operationId: agentsIdPUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de l'agent.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        "200":
+          description: Les informations de l'agent ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+      x-swagger-router-controller: Agents
+    delete:
+      tags:
+      - Agents
+      summary: Supprime un agent en fonction de son identifiant.
+      operationId: agentsIdDELETE
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de l'agent.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: L'agent a été supprimé avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+      x-swagger-router-controller: Agents
+  /agents/{id}/competences/:
+    get:
+      tags:
+      - Agents
+      summary: Liste les compétences d'un agent en fonction de son identifiant.
+      operationId: agentsIdCompetencesGET
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de l'agent.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Une collection de compétences de l'agent est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Competence'
+                x-content-type: application/json
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+      x-swagger-router-controller: Agents
+    put:
+      tags:
+      - Agents
+      summary: Met à jour les compétences d'un agent en fonction de son identifiant.
+      operationId: agentsIdCompetencesPUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de l'agent.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Une collection d'identifiants de compétences.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+      responses:
+        "200":
+          description: Les compétences de l'agent ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+      x-swagger-router-controller: Agents
+  /competences/:
+    get:
+      tags:
+      - Competences
+      summary: Liste toutes les compétences.
+      operationId: competencesGET
+      parameters:
+      - name: limit
+        in: query
+        description: Nombre maximum d'éléments à retourner.
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          format: int32
+          default: 20
+      - name: page
+        in: query
+        description: Nombre d'elements à sauter avant de retourner le resultat.
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+          default: 0
+      responses:
+        "200":
+          description: Une collection de compétences est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                x-content-type: application/json
+      x-swagger-router-controller: Competences
+    post:
+      tags:
+      - Competences
+      summary: Ajoute une nouvelle compétence.
+      operationId: competencesPOST
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Competence'
+      responses:
+        "200":
+          description: La compétence a correctement été ajoutée.
+      x-swagger-router-controller: Competences
+  /competences/{id}/:
+    get:
+      tags:
+      - Competences
+      summary: Liste les informations d'une compétence en fonction de son identifiant.
+      operationId: competencesIdGET
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de la compétence.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Une unique compétence est retournée.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Competence'
+        "404":
+          description: L'identifiant ne correspond à aucune compétence.
+      x-swagger-router-controller: Competences
+    put:
+      tags:
+      - Competences
+      summary: Met à jour les informations d'une compétence en fonction de son identifiant.
+      operationId: competencesIdPUT
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de la compétence.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Competence'
+      responses:
+        "200":
+          description: Les informations de la compétence ont été correctement mises
+            à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune compétence.
+      x-swagger-router-controller: Competences
+    delete:
+      tags:
+      - Competences
+      summary: Supprime une compétence en fonction de son identifiant.
+      operationId: competencesIdDELETE
+      parameters:
+      - name: id
+        in: path
+        description: L'identifiant de la compétence.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: La compétence a été supprimée avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucune compétence.
+      x-swagger-router-controller: Competences
+components:
+  schemas:
+    Valorant:
+      type: object
+      properties:
+        nom:
+          type: string
+        dateCreation:
+          type: string
+        modeDeJeu:
+          type: string
+        editeur:
+          type: string
+        plateforme:
+          type: string
+        joueurs:
+          type: array
+        maps:
+          type: array
+        agents:
+          type: array
+        armes:
+          type: array
+      example:
+        dateCreation: dateCreation
+        maps: ""
+        armes: ""
+        plateforme: plateforme
+        nom: nom
+        modeDeJeu: modeDeJeu
+        editeur: editeur
+        joueurs: ""
+        agents: ""
+    Joueur:
+      type: object
+      properties:
+        id:
+          type: string
+        pseudo:
+          type: string
+        niveau:
+          type: string
+        rank:
+          type: string
+        dateCreationCompte:
+          type: string
+        agentSelectionneId:
+          type: string
+        mapSelectionneeId:
+          type: string
+        ArmeSelectionneeId:
+          type: string
+      example:
+        mapSelectionneeId: mapSelectionneeId
+        rank: rank
+        ArmeSelectionneeId: ArmeSelectionneeId
+        id: id
+        agentSelectionneId: agentSelectionneId
+        pseudo: pseudo
+        niveau: niveau
+        dateCreationCompte: dateCreationCompte
+    Arme:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        type:
+          type: string
+        prix:
+          type: number
+        skins:
+          type: array
+      example:
+        skins: ""
+        prix: 0.80082819046101150206595775671303272247314453125
+        id: id
+        type: type
+        nom: nom
+    Skin:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        prix:
+          type: number
+        armeId:
+          type: string
+      example:
+        prix: 0.80082819046101150206595775671303272247314453125
+        id: id
+        armeId: armeId
+        nom: nom
+    Map:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        lieu:
+          type: string
+        type:
+          type: string
+        orbesDeCompetence:
+          type: array
+      example:
+        id: id
+        orbesDeCompetence: ""
+        type: type
+        nom: nom
+        lieu: lieu
+    Competence:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        description:
+          type: string
+      example:
+        description: description
+        id: id
+        nom: nom
+    Agent:
+      type: object
+      properties:
+        id:
+          type: string
+        nom:
+          type: string
+        type:
+          type: string
+        competences:
+          type: array
+      example:
+        competences: ""
+        id: id
+        type: type
+        nom: nom
+  parameters:
+    pageParam:
+      name: page
+      in: query
+      description: Nombre d'elements à sauter avant de retourner le resultat.
+      required: false
+      style: form
+      explode: true
+      schema:
+        minimum: 0
+        type: integer
+        format: int32
+        default: 0
+    limitParam:
+      name: limit
+      in: query
+      description: Nombre maximum d'éléments à retourner.
+      required: false
+      style: form
+      explode: true
+      schema:
+        maximum: 100
+        minimum: 1
+        type: integer
+        format: int32
+        default: 20

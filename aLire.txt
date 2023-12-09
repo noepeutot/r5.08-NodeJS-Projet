@@ -1,0 +1,4 @@
+enlever les routes en plus,
+
+changer les id par leur nom
+un id dans un path doit etre unique, changer le nom d'id si besoin
