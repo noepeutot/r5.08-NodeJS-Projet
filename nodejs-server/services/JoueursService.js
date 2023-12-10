@@ -10,9 +10,9 @@ const {readData, saveData, writeData} = require("./dataService");
  * returns List
  **/
 exports.joueursGET = function (limit, page) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const players = valorantData.joueurs;
       const playerList = players.map(player => {
         return {
@@ -28,7 +28,7 @@ exports.joueursGET = function (limit, page) {
       });
       resolve(playerList);
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des joueurs.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des joueurs.'});
     }
   });
 };
@@ -40,9 +40,9 @@ exports.joueursGET = function (limit, page) {
  * no response value expected for this operation
  **/
 exports.joueursIdDELETE = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const players = valorantData.joueurs;
       const playerIndex = players.findIndex(player => player.id === id);
 
@@ -50,13 +50,13 @@ exports.joueursIdDELETE = function (id) {
         // Supprime le joueur avec l'identifiant donné
         players.splice(playerIndex, 1);
         // Met à jour le fichier de données avec les modifications
-        writeData(valorantData);
+        await writeData(valorantData);
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun joueur.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun joueur.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la suppression du joueur.' });
+      reject({statusCode: 500, message: 'Erreur lors de la suppression du joueur.'});
     }
   });
 };
@@ -68,9 +68,9 @@ exports.joueursIdDELETE = function (id) {
  * returns Joueur
  **/
 exports.joueursIdGET = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const player = valorantData.joueurs.find(player => player.id === id);
 
       if (player) {
@@ -87,13 +87,13 @@ exports.joueursIdGET = function (id) {
           },
         ];
 
-        const response = { ...player, links };
+        const response = {...player, links};
         resolve(response);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun joueur.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun joueur.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des informations du joueur.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des informations du joueur.'});
     }
   });
 };
@@ -106,22 +106,22 @@ exports.joueursIdGET = function (id) {
  * no response value expected for this operation
  **/
 exports.joueursIdPUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const players = valorantData.joueurs;
       const playerIndex = players.findIndex(player => player.id === id);
 
       if (playerIndex !== -1) {
         // Met à jour les informations du joueur avec l'identifiant donné
-        players[playerIndex] = { ...players[playerIndex], ...body };
-        writeData(valorantData); // Ecrit les données mises à jour dans le fichier
+        players[playerIndex] = {...players[playerIndex], ...body};
+        await writeData(valorantData); // Ecrit les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun joueur.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun joueur.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des informations du joueur.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des informations du joueur.'});
     }
   });
 };
@@ -133,26 +133,26 @@ exports.joueursIdPUT = function (body, id) {
  * no response value expected for this operation
  **/
 exports.joueursPOST = function (body) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const players = valorantData.joueurs;
 
       // Génère un nouvel identifiant unique pour le joueur
       const newPlayerId = (players.length + 1).toString();
 
       // Crée un nouveau joueur avec l'identifiant généré et les données fournies
-      const newPlayer = { id: newPlayerId, ...body };
+      const newPlayer = {id: newPlayerId, ...body};
 
       // Ajoute le nouveau joueur à la liste
       players.push(newPlayer);
 
       // Enregistre les données mises à jour dans le fichier
-      saveData(valorantData);
+      await saveData(valorantData);
 
       resolve();
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de l\'ajout du nouveau joueur.' });
+      reject({statusCode: 500, message: 'Erreur lors de l\'ajout du nouveau joueur.'});
     }
   });
 };

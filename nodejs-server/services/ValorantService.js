@@ -8,9 +8,9 @@ const {readData, saveData, writeData} = require("./dataService");
  * return List
  */
 exports.rootGET = function () {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const ValoInformations = valorantData.informations;
 
       if (ValoInformations) {
@@ -80,10 +80,10 @@ exports.rootGET = function () {
         const response = {...ValoInformations, links};
         resolve(response);
       } else {
-        reject({ statusCode: 404, message: 'Aucune information sur Valorant a été trouvé.' });
+        reject({statusCode: 404, message: 'Aucune information sur Valorant a été trouvé.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des informations de Valorant.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des informations de Valorant.'});
     }
   });
 };

@@ -13,7 +13,7 @@ Chaque arme possède des skins qui lui appartiennent.
 ![Modele de donnees](img/ModèleDeDonnées.drawio.svg)
 
 ### Jeu de données
-Les données utilisées sont des données officielles pour les maps, agents, compétences, armes et skins.
+Les données utilisées sont des données officielles pour les maps, agents, compétences, armes et skins. Des recherches approfondies
 La classe joueur comme les liens entre a été généré avec chatgpt.
 
 

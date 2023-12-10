@@ -2,8 +2,9 @@
 
 const path = require('path');
 const http = require('http');
+const express = require('express');
+const cors = require('cors'); // Ajoutez cette ligne
 
-const oas3Tools = require('oas3-tools');
 const serverPort = 8080;
 
 // swaggerRouter configuration
@@ -13,12 +14,14 @@ const options = {
     },
 };
 
-const expressAppConfig = oas3Tools.expressAppConfig(path.join(__dirname, 'api/openapi.yaml'), options);
+const expressAppConfig = require('oas3-tools').expressAppConfig(path.join(__dirname, 'api/openapi.yaml'), options);
 const app = expressAppConfig.getApp();
+
+// Ajoutez ce middleware cors après la création de l'application Express
+app.use(cors());
 
 // Initialize the Swagger middleware
 http.createServer(app).listen(serverPort, function () {
     console.log('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);
     console.log('Swagger-ui is available on http://localhost:%d/docs', serverPort);
 });
-

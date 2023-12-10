@@ -10,9 +10,9 @@ const {readData, saveData, writeData} = require("./dataService");
  * returns List
  **/
 exports.armesGET = function (limit, page) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const armes = valorantData.armes;
       const armeList = armes.map(arme => {
         return {
@@ -29,7 +29,7 @@ exports.armesGET = function (limit, page) {
 
       resolve(armeList);
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des armes.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des armes.'});
     }
   });
 };
@@ -41,26 +41,26 @@ exports.armesGET = function (limit, page) {
  * no response value expected for this operation
  **/
 exports.armesPOST = function (body) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const armes = valorantData.armes;
 
       // Génère un nouvel identifiant unique pour l'arme
       const newArmeId = (armes.length + 1).toString();
 
       // Créé la nouvelle arme avec l'identifiant généré
-      const newArme = { id: newArmeId, ...body };
+      const newArme = {id: newArmeId, ...body};
 
       // Ajoute la nouvelle arme à la liste des armes
       armes.push(newArme);
 
       // Ecrit les données mises à jour dans le fichier
-      saveData(valorantData);
+      await saveData(valorantData);
 
       resolve();
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de l\'ajout de la nouvelle arme.' });
+      reject({statusCode: 500, message: 'Erreur lors de l\'ajout de la nouvelle arme.'});
     }
   });
 };
@@ -73,22 +73,22 @@ exports.armesPOST = function (body) {
  * no response value expected for this operation
  **/
 exports.armesIdDELETE = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const armes = valorantData.armes;
       const armeIndex = armes.findIndex(arme => arme.id === id);
 
       if (armeIndex !== -1) {
         // Supprime l'arme avec l'identifiant donné
         armes.splice(armeIndex, 1);
-        writeData(valorantData);
+        await writeData(valorantData);
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la suppression de l\'arme.' });
+      reject({statusCode: 500, message: 'Erreur lors de la suppression de l\'arme.'});
     }
   });
 };
@@ -100,9 +100,9 @@ exports.armesIdDELETE = function (id) {
  * returns Arme
  **/
 exports.armesIdGET = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const arme = valorantData.armes.find(arme => arme.id === id);
 
       if (arme) {
@@ -129,13 +129,13 @@ exports.armesIdGET = function (id) {
           }
         ];
 
-        const response = { ...arme, links };
+        const response = {...arme, links};
         resolve(response);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des informations de l\'arme.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des informations de l\'arme.'});
     }
   });
 };
@@ -148,22 +148,22 @@ exports.armesIdGET = function (id) {
  * no response value expected for this operation
  **/
 exports.armesIdPUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const armes = valorantData.armes;
       const armeIndex = armes.findIndex(arme => arme.id === id);
 
       if (armeIndex !== -1) {
         // Met à jour les informations de l'arme avec l'identifiant donné
-        armes[armeIndex] = { ...armes[armeIndex], ...body };
-        writeData(valorantData);
+        armes[armeIndex] = {...armes[armeIndex], ...body};
+        await writeData(valorantData);
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des informations de l\'arme.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des informations de l\'arme.'});
     }
   });
 };

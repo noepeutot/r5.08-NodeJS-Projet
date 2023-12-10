@@ -10,9 +10,9 @@ const {readData, saveData, writeData} = require("./dataService");
  * returns List
  **/
 exports.skinsGET = function (limit, page) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const skins = valorantData.skins;
 
       const skinList = skins.map(skin => {
@@ -30,7 +30,7 @@ exports.skinsGET = function (limit, page) {
 
       resolve(skinList);
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des skins.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des skins.'});
     }
   });
 };
@@ -42,23 +42,23 @@ exports.skinsGET = function (limit, page) {
  * no response value expected for this operation
  **/
 exports.skinsPOST = function (body) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const skins = valorantData.skins;
 
       // Générez un nouvel identifiant unique pour le nouveau skin (vous pouvez utiliser une bibliothèque comme uuid)
       const newSkinId = (skins.length + 1).toString();
 
       // Ajoute le nouvel agent avec l'identifiant généré
-      const newSkin = { id: newSkinId, ...body };
+      const newSkin = {id: newSkinId, ...body};
 
       skins.push(newSkin);
-      saveData(valorantData); // Ecrit les données mises à jour dans le fichier
+      await saveData(valorantData); // Ecrit les données mises à jour dans le fichier
 
       resolve();
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de l\'ajout d\'un nouveau skin.' });
+      reject({statusCode: 500, message: 'Erreur lors de l\'ajout d\'un nouveau skin.'});
     }
   });
 };
@@ -71,21 +71,21 @@ exports.skinsPOST = function (body) {
  * no response value expected for this operation
  **/
 exports.skinsIdDELETE = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const skins = valorantData.skins;
       const skinIndex = skins.findIndex(skin => skin.id === id);
 
       if (skinIndex !== -1) {
         skins.splice(skinIndex, 1);
-        writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
+        await writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun skin.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun skin.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la suppression du skin.' });
+      reject({statusCode: 500, message: 'Erreur lors de la suppression du skin.'});
     }
   });
 };
@@ -97,9 +97,9 @@ exports.skinsIdDELETE = function (id) {
  * returns Skin
  **/
 exports.skinsIdGET = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const skin = valorantData.skins.find(skin => skin.id === id);
 
       if (skin) {
@@ -116,13 +116,13 @@ exports.skinsIdGET = function (id) {
           }
         ];
 
-        const response = { ...skin, links };
+        const response = {...skin, links};
         resolve(response);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun skin.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun skin.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des informations du skin.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des informations du skin.'});
     }
   });
 };
@@ -135,22 +135,22 @@ exports.skinsIdGET = function (id) {
  * no response value expected for this operation
  **/
 exports.skinsIdPUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const skins = valorantData.skins;
       const skinIndex = skins.findIndex(skin => skin.id === id);
 
       if (skinIndex !== -1) {
         // Met à jour les informations du skin avec l'identifiant donné
-        skins[skinIndex] = { ...skins[skinIndex], ...body };
-        writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
+        skins[skinIndex] = {...skins[skinIndex], ...body};
+        await writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun skin.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun skin.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des informations du skin.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des informations du skin.'});
     }
   });
 };
@@ -163,22 +163,22 @@ exports.skinsIdPUT = function (body, id) {
  * no response value expected for this operation
  **/
 exports.armesIdSkinsPUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const armes = valorantData.armes;
       const armeIndex = armes.findIndex(arme => arme.id === id);
 
       if (armeIndex !== -1) {
         // Met à jour la liste des skins de l'arme avec l'identifiant donné
         armes[armeIndex].skins = body;
-        writeData(valorantData); // Ecrit les données mises à jour dans le fichier
+        await writeData(valorantData); // Ecrit les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des skins de l\'arme.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des skins de l\'arme.'});
     }
   });
 };
@@ -192,9 +192,9 @@ exports.armesIdSkinsPUT = function (body, id) {
  * returns List
  **/
 exports.armesIdSkinsGET = function (limit, page, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const armes = valorantData.armes;
       const arme = armes.find(arme => arme.id === id);
 
@@ -215,10 +215,10 @@ exports.armesIdSkinsGET = function (limit, page, id) {
 
         resolve(skinList);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune arme.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des skins de l\'arme.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des skins de l\'arme.'});
     }
   });
 };

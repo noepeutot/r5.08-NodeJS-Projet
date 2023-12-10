@@ -10,9 +10,9 @@ const {readData, saveData, writeData} = require("./dataService");
  * returns List
  **/
 exports.mapsGET = function (limit, page) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const maps = valorantData.maps;
 
       // Appliquez des filtres ici en fonction de limit et page si nécessaire
@@ -32,7 +32,7 @@ exports.mapsGET = function (limit, page) {
 
       resolve(mapList);
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des maps.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des maps.'});
     }
   });
 };
@@ -44,22 +44,22 @@ exports.mapsGET = function (limit, page) {
  * no response value expected for this operation
  **/
 exports.mapsPOST = function (body) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const maps = valorantData.maps;
       // Génère un nouvel identifiant unique pour l'agent
       const newMapId = (maps.length + 1).toString();
 
       // Ajoute le nouvel agent avec l'identifiant généré
-      const newMap = { id: newMapId, ...body };
+      const newMap = {id: newMapId, ...body};
 
       maps.push(newMap);
-      saveData(valorantData); // Ecrit les données mises à jour dans le fichier
+      await saveData(valorantData); // Ecrit les données mises à jour dans le fichier
 
       resolve();
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de l\'ajout d\'une nouvelle map.' });
+      reject({statusCode: 500, message: 'Erreur lors de l\'ajout d\'une nouvelle map.'});
     }
   });
 };
@@ -70,22 +70,22 @@ exports.mapsPOST = function (body) {
  * no response value expected for this operation
  **/
 exports.mapsIdDELETE = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const maps = valorantData.maps;
       const mapIndex = maps.findIndex(map => map.id === id);
 
       if (mapIndex !== -1) {
         // Supprime la map avec l'identifiant donné
         maps.splice(mapIndex, 1);
-        writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
+        await writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la suppression de la map.' });
+      reject({statusCode: 500, message: 'Erreur lors de la suppression de la map.'});
     }
   });
 };
@@ -97,9 +97,9 @@ exports.mapsIdDELETE = function (id) {
  * returns Map
  **/
 exports.mapsIdGET = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const map = valorantData.maps.find(map => map.id === id);
 
       if (map) {
@@ -126,13 +126,13 @@ exports.mapsIdGET = function (id) {
           }
         ];
 
-        const response = { ...map, links };
+        const response = {...map, links};
         resolve(response);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des informations de la map.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des informations de la map.'});
     }
   });
 };
@@ -145,22 +145,22 @@ exports.mapsIdGET = function (id) {
  * no response value expected for this operation
  **/
 exports.mapsIdPUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const maps = valorantData.maps;
       const mapIndex = maps.findIndex(map => map.id === id);
 
       if (mapIndex !== -1) {
         // Met à jour les informations de la map avec l'identifiant donné
-        maps[mapIndex] = { ...maps[mapIndex], ...body };
-        writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
+        maps[mapIndex] = {...maps[mapIndex], ...body};
+        await writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des informations de la map.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des informations de la map.'});
     }
   });
 };
@@ -172,9 +172,9 @@ exports.mapsIdPUT = function (body, id) {
  * returns List
  **/
 exports.mapsIdOrbes_competenceGET = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const map = valorantData.maps.find(map => map.id === id);
 
       if (map) {
@@ -195,10 +195,10 @@ exports.mapsIdOrbes_competenceGET = function (id) {
 
         resolve(orbesCompetenceList);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des orbes de compétence de la map.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des orbes de compétence de la map.'});
     }
   });
 }
@@ -211,22 +211,22 @@ exports.mapsIdOrbes_competenceGET = function (id) {
  * no response value expected for this operation
  **/
 exports.mapsIdOrbes_competencePUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const maps = valorantData.maps;
       const mapIndex = maps.findIndex(map => map.id === id);
 
       if (mapIndex !== -1) {
         // Met à jour les orbes de compétence de la map avec l'identifiant donné
         maps[mapIndex].orbesDeCompetence = body;
-        writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
+        await writeData(valorantData); // Assurez-vous d'écrire les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune map.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des orbes de compétence de la map.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des orbes de compétence de la map.'});
     }
   });
 }

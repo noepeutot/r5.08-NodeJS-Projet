@@ -9,9 +9,9 @@ const {readData, saveData, writeData} = require("./dataService");
  * returns List
  **/
 exports.competencesGET = function (limit, page) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const competences = valorantData.competences;
 
       const competenceList = competences.map(competence => {
@@ -29,7 +29,7 @@ exports.competencesGET = function (limit, page) {
 
       resolve(competenceList);
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des compétences.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des compétences.'});
     }
   });
 };
@@ -41,21 +41,21 @@ exports.competencesGET = function (limit, page) {
  * no response value expected for this operation
  **/
 exports.competencesIdDELETE = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const competences = valorantData.competences;
       const competenceIndex = competences.findIndex(competence => competence.id === id);
 
       if (competenceIndex !== -1) {
         competences.splice(competenceIndex, 1);
-        writeData(valorantData);
+        await writeData(valorantData);
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune compétence.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune compétence.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la suppression de la compétence.' });
+      reject({statusCode: 500, message: 'Erreur lors de la suppression de la compétence.'});
     }
   });
 };
@@ -67,9 +67,9 @@ exports.competencesIdDELETE = function (id) {
  * returns Competence
  **/
 exports.competencesIdGET = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const competence = valorantData.competences.find(competence => competence.id === id);
 
       if (competence) {
@@ -92,10 +92,10 @@ exports.competencesIdGET = function (id) {
         };
         resolve(response);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune compétence.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune compétence.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des informations de la compétence.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des informations de la compétence.'});
     }
   });
 };
@@ -108,21 +108,21 @@ exports.competencesIdGET = function (id) {
  * no response value expected for this operation
  **/
 exports.competencesIdPUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const competences = valorantData.competences;
       const competenceIndex = competences.findIndex(competence => competence.id === id);
 
       if (competenceIndex !== -1) {
-        competences[competenceIndex] = { ...competences[competenceIndex], ...body };
-        writeData(valorantData);
+        competences[competenceIndex] = {...competences[competenceIndex], ...body};
+        await writeData(valorantData);
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucune compétence.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucune compétence.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des informations de la compétence.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des informations de la compétence.'});
     }
   });
 };
@@ -134,22 +134,22 @@ exports.competencesIdPUT = function (body, id) {
  * no response value expected for this operation
  **/
 exports.competencesPOST = function (body) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const competences = valorantData.competences;
 
       // Génère un nouvel identifiant unique pour la compétence
       const newCompetencetId = (competences.length + 1).toString();
 
       // Ajoute le nouvel agent avec l'identifiant généré
-      const newCompetence = { id: newCompetencetId, ...body };
+      const newCompetence = {id: newCompetencetId, ...body};
       competences.push(newCompetence);
-      saveData(valorantData); // Ecrit les données mises à jour dans le fichier
+      await saveData(valorantData); // Ecrit les données mises à jour dans le fichier
 
       resolve();
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de l\'ajout d\'une nouvelle compétence.' });
+      reject({statusCode: 500, message: 'Erreur lors de l\'ajout d\'une nouvelle compétence.'});
     }
   });
 };

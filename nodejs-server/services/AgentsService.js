@@ -10,9 +10,9 @@ const {readData, saveData, writeData} = require("./dataService");
  * returns List
  **/
 exports.agentsGET = function (limit, page) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const agents = valorantData.agents;
       const agentList = agents.map(agent => {
         return {
@@ -28,7 +28,7 @@ exports.agentsGET = function (limit, page) {
       });
       resolve(agentList);
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des agents.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des agents.'});
     }
   });
 };
@@ -40,22 +40,22 @@ exports.agentsGET = function (limit, page) {
  * no response value expected for this operation
  **/
 exports.agentsPOST = function (body) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const agents = valorantData.agents;
 
       // Génère un nouvel identifiant unique pour l'agent
       const newAgentId = (agents.length + 1).toString();
 
       // Ajoute le nouvel agent avec l'identifiant généré
-      const newAgent = { id: newAgentId, ...body };
+      const newAgent = {id: newAgentId, ...body};
       agents.push(newAgent);
-      saveData(valorantData); // Ecrit les données mises à jour dans le fichier
+      await saveData(valorantData); // Ecrit les données mises à jour dans le fichier
 
       resolve();
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de l\'ajout du nouvel agent.' });
+      reject({statusCode: 500, message: 'Erreur lors de l\'ajout du nouvel agent.'});
     }
   });
 };
@@ -67,22 +67,22 @@ exports.agentsPOST = function (body) {
  * no response value expected for this operation
  **/
 exports.agentsIdDELETE = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const agents = valorantData.agents;
       const agentIndex = agents.findIndex(agent => agent.id === id);
 
       if (agentIndex !== -1) {
         // Supprime l'agent avec l'identifiant donné
         agents.splice(agentIndex, 1);
-        writeData(valorantData); // Ecrit les données mises à jour dans le fichier
+        await writeData(valorantData); // Ecrit les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la suppression de l\'agent.' });
+      reject({statusCode: 500, message: 'Erreur lors de la suppression de l\'agent.'});
     }
   });
 };
@@ -94,9 +94,9 @@ exports.agentsIdDELETE = function (id) {
  * returns Agent
  **/
 exports.agentsIdGET = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const agent = valorantData.agents.find(agent => agent.id === id);
 
       if (agent) {
@@ -123,13 +123,13 @@ exports.agentsIdGET = function (id) {
           },
         ];
 
-        const response = { ...agent, links };
+        const response = {...agent, links};
         resolve(response);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des informations de l\'agent.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des informations de l\'agent.'});
     }
   });
 };
@@ -142,22 +142,22 @@ exports.agentsIdGET = function (id) {
  * no response value expected for this operation
  **/
 exports.agentsIdPUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const agents = valorantData.agents;
       const agentIndex = agents.findIndex(agent => agent.id === id);
 
       if (agentIndex !== -1) {
         // Met à jour les informations de l'agent avec l'identifiant donné
-        agents[agentIndex] = { ...agents[agentIndex], ...body };
-        writeData(valorantData); // Ecrit les données mises à jour dans le fichier
+        agents[agentIndex] = {...agents[agentIndex], ...body};
+        await writeData(valorantData); // Ecrit les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des informations de l\'agent.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des informations de l\'agent.'});
     }
   });
 };
@@ -170,22 +170,22 @@ exports.agentsIdPUT = function (body, id) {
  * no response value expected for this operation
  **/
 exports.agentsIdCompetencesPUT = function (body, id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const agents = valorantData.agents;
       const agentIndex = agents.findIndex(agent => agent.id === id);
 
       if (agentIndex !== -1) {
         // Met à jour les compétences de l'agent avec l'identifiant donné
         agents[agentIndex].competences = body;
-        writeData(valorantData); // Ecrit les données mises à jour dans le fichier
+        await writeData(valorantData); // Ecrit les données mises à jour dans le fichier
         resolve();
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la mise à jour des compétences de l\'agent.' });
+      reject({statusCode: 500, message: 'Erreur lors de la mise à jour des compétences de l\'agent.'});
     }
   });
 };
@@ -197,9 +197,9 @@ exports.agentsIdCompetencesPUT = function (body, id) {
  * returns List
  **/
 exports.agentsIdCompetencesGET = function (id) {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
     try {
-      const valorantData = readData();
+      const valorantData = await readData();
       const agent = valorantData.agents.find(agent => agent.id === id);
 
       if (agent) {
@@ -221,10 +221,10 @@ exports.agentsIdCompetencesGET = function (id) {
 
         resolve(competenceList);
       } else {
-        reject({ statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.' });
+        reject({statusCode: 404, message: 'L\'identifiant ne correspond à aucun agent.'});
       }
     } catch (error) {
-      reject({ statusCode: 500, message: 'Erreur lors de la récupération des compétences de l\'agent.' });
+      reject({statusCode: 500, message: 'Erreur lors de la récupération des compétences de l\'agent.'});
     }
   });
 };
