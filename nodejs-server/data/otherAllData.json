@@ -1,0 +1,503 @@
+{
+  "Skins": [
+    {
+      "nom": "HMG-50 Odin",
+      "id": "F454EFD1-49CB-372F-7096-D394DF615308",
+      "Assetnom": "Default__HeavyMachineGun_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Prism Ares",
+      "id": "841C9AAB-4005-F7FD-3B67-24B335100FB4",
+      "Assetnom": "Default__LightMachineGun_Iridescence_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "LSW-RF Ares",
+      "id": "5305D9C4-4F46-FBF4-9E9A-DEA772C263B5",
+      "Assetnom": "Default__LightMachineGun_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Reaver Vandal",
+      "id": "EE07913E-4F5C-6F9A-5ECB-6497C7228C5B",
+      "Assetnom": "Default__AssaultRifle_AK_Fantasy_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Avalanche Vandal",
+      "id": "41B55C92-4AEB-9C86-854A-4ABCD48EA0BA",
+      "Assetnom": "Default__AK_Ice_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Luxe Vandal",
+      "id": "30FD16AF-4560-B2E2-7780-EE8148A0946A",
+      "Assetnom": "Default__AK_Luxury_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "AR-762 Vandal",
+      "id": "27F21D97-4C4B-BD1C-1F08-31830AB0BE84",
+      "Assetnom": "Default__AssaultRifle_AK_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Ronin Bulldog",
+      "id": "9EB4E18E-4130-BDE3-FE00-0A8FBA4B4728",
+      "Assetnom": "Default__AssaultRifle_Burst_Ronin_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "3X-PDR Bulldog",
+      "id": "724A7F42-4315-ECCF-0E76-77BDD3EC2E09",
+      "Assetnom": "Default__AssaultRifle_Burst_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Avalanche Phantom",
+      "id": "C38DCED0-454D-D296-522E-6F8643DECD3B",
+      "Assetnom": "Default__AssaultRifle_ACR_Ice_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Prism Phantom",
+      "id": "6586A7DB-4041-6A29-F37C-D6817657CAA5",
+      "Assetnom": "Default__AssaultRifle_ACR_Iridescence_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "SW-ACR Phantom",
+      "id": "337CB216-4A6E-D85D-88C2-F29AB317784C",
+      "Assetnom": "Default__AssaultRifle_ACR_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Luxe Judge",
+      "id": "5237CFCA-4D83-6190-A7F9-D2BDC117EA67",
+      "Assetnom": "Default__AutomaticShotgun_Luxury_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "ACS-12 Judge",
+      "id": "ACD26127-48FF-8B9E-7BA6-B989AF8A4B24",
+      "Assetnom": "Default__AutomaticShotgun_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "PA-12 Bucky",
+      "id": "70C97FB2-4D79-D4BB-5173-A1888CD4BFD9",
+      "Assetnom": "Default__PumpShotgun_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Breach's Frenzy",
+      "id": "7D05D1CE-4BF2-FA96-D8F4-DCA86052E3D2",
+      "Assetnom": "Default__AutomaticPistol_Breach_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Phoenix's Frenzy",
+      "id": "5BB5ACB1-44DD-184B-484E-319188EF78EB",
+      "Assetnom": "Default__AutomaticPistol_Phoenix_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "AMP-11 Frenzy",
+      "id": "F06657F3-48B6-6314-7235-A9A2749DF5B9",
+      "Assetnom": "Default__AutomaticPistol_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Raze's Classic",
+      "id": "34919680-4F00-554B-0C2B-95ACCA7D0D36",
+      "Assetnom": "Default__BasePistol_Clay_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Avalanche Classic",
+      "id": "6B6A219D-490A-45F1-1E5C-40BBF3DF5F28",
+      "Assetnom": "Default__BasePistol_Ice_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "BP-9 Classic",
+      "id": "24AEE897-4CDC-B0FD-E596-1BA90FA6D1B2",
+      "Assetnom": "Default__BasePistol_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Sage's Classic",
+      "id": "47D5E54A-48E5-B62A-5CF5-3CB7EFC12E90",
+      "Assetnom": "Default__BasePistol_Thorne_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Imperium Classic",
+      "id": "AAB02A57-4D4B-1C65-C8B4-8DBB42B8CE76",
+      "Assetnom": "Default__BasePistol_Warring_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Cypher's Ghost",
+      "id": "A1D3A9E2-4F61-B1F7-3A01-CF867264D1CB",
+      "Assetnom": "Default__LugerPistol_Gumshoe_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Prism Ghost",
+      "id": "8163DB1A-4E3C-8F11-92FD-BC9E26253593",
+      "Assetnom": "Default__LugerPistol_Iridescence_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Luxe Ghost",
+      "id": "CB98B0D6-4E26-973C-C10D-A38637D04B65",
+      "Assetnom": "Default__Luger_Luxury_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "LP-15 Ghost",
+      "id": "1C63B43B-43C4-04E4-01C9-7AA1BFFA5AC1",
+      "Assetnom": "Default__LugerPistol_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Omen's Ghost",
+      "id": "E24330EF-4315-512C-4588-95A601995888",
+      "Assetnom": "Default__LugerPistol_Wraith_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Reaver Sheriff",
+      "id": "BC9B3086-4673-ED51-A88F-DA918E9ED9D8",
+      "Assetnom": "Default__RevolverPistol_Fantasy_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Sova's Sheriff",
+      "id": "4F1FDE01-4130-0AE7-1320-6FB2F2FB6AB9",
+      "Assetnom": "Default__RevolverPistol_Hunter_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Ronin Sheriff",
+      "id": "DA720E2F-48AB-5E8F-8CAC-73BC9D2B87F7",
+      "Assetnom": "Default__RevolverPistol_Ronin_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Brimstone's Sheriff",
+      "id": "26FF0E3E-469A-CBDD-F79F-A3B89556CDEF",
+      "Assetnom": "Default__RevolverPistol_Sarge_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "SAR-6 Sheriff",
+      "id": "1EF6BA68-4DBE-30C7-6BC8-93A6C6F13F04",
+      "Assetnom": "Default__RevolverPistol_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Jett's Sheriff",
+      "id": "121BC438-4748-B2EE-2C58-768C8C26838B",
+      "Assetnom": "Default__RevolverPistol_Wushu_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Viper's Shorty",
+      "id": "9428E52D-4611-C8FF-1B63-7B8E386FE8CB",
+      "Assetnom": "Default__SawedOffShotgun_Pandemic_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "DBS-20 Shorty",
+      "id": "48AD078A-4DAE-2B85-A945-F4B6D1EFECBB",
+      "Assetnom": "Default__SawedOffShotgun_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Reaver Operator",
+      "id": "D23F7A26-4853-B587-E936-D3833E69A880",
+      "Assetnom": "Default__BoltSniper_Fantasy_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Prism Operator",
+      "id": "5CED2C69-442E-D1AD-83FE-8FB8B2AC0C0F",
+      "Assetnom": "Default__BoltSniper_Iridescence_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Luxe Operator",
+      "id": "0BD5DA19-491F-DD4A-27E2-C9959B10A87A",
+      "Assetnom": "Default__BoltSniper_Luxury_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Ronin Operator",
+      "id": "4C3357A9-4D5F-0E10-0652-1CBD8F9AC40D",
+      "Assetnom": "Default__BoltSniper_Ronin_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "BSW-460 Operator",
+      "id": "D1F2920F-469A-3431-AD96-96AFBD0017F2",
+      "Assetnom": "Default__BoltSniper_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "DMR-04 Guardian",
+      "id": "3BF1E8E0-47E8-F27A-6054-929575F41A54",
+      "Assetnom": "Default__DMR_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Avalanche Marshal",
+      "id": "DD58AB43-4FF3-659E-8F30-B8BD26619D4D",
+      "Assetnom": "Default__LeverSniper_Ice_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "LAR-1887 Marshal",
+      "id": "FD44B2D5-49EE-77AB-FA56-588F3AC0C268",
+      "Assetnom": "Default__LeverSniperRifle_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Avalanche Spectre",
+      "id": "A0938D46-4593-19B4-1AA5-F3B32ECB9963",
+      "Assetnom": "Default__MP5_Ice_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Prism Spectre",
+      "id": "B9836020-433A-ACE4-EB35-3FBD67688C53",
+      "Assetnom": "Default__MP5_Iridescence_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Luxe Spectre",
+      "id": "3EB4D837-4AE9-B52A-B41D-2789F9974F15",
+      "Assetnom": "Default__MP5_Luxury_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "SMG-9 Spectre",
+      "id": "F01D1307-4299-42F5-2C5E-7DAB7E69AB19",
+      "Assetnom": "Default__SubMachineGun_MP5_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "CQ-SBR Stinger",
+      "id": "940FB417-4A9C-3004-41F5-3E8F1F4178B2",
+      "Assetnom": "Default__Vector_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Reaver Melee",
+      "id": "2234BDE5-4118-4B50-2D3C-DFB04C1A4404",
+      "Assetnom": "Default__Melee_FantasyPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Prism Melee",
+      "id": "6FA830C2-4924-87B2-1510-2FA4FBDCA1DB",
+      "Assetnom": "Default__Melee_Iridescence_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Luxe Melee",
+      "id": "4AF88517-4949-9CAA-9DDA-1980F07202A4",
+      "Assetnom": "Default__Melee_Base_Luxury_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Tactical Knife",
+      "id": "12CC9ED2-4430-D2FE-3064-F7A19B1BA7C7",
+      "Assetnom": "Default__Melee_Base_Standard_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Imperium Melee",
+      "id": "A8250E8B-4176-E056-AF5A-80B47E4B4E31",
+      "Assetnom": "Default__Melee_Warring_PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    }
+  ],
+  "Equips": [
+    {
+      "nom": "Odin",
+      "id": "63E6C2B6-4A8E-869C-3D4C-E38355226584",
+      "Assetnom": "Default__HeavyMachineGunPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Ares",
+      "id": "55D8A0F4-4274-CA67-FE2C-06AB45EFDF58",
+      "Assetnom": "Default__LightMachineGunPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Vandal",
+      "id": "9C82E19D-4575-0200-1A81-3EACF00CF872",
+      "Assetnom": "Default__AKPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Bulldog",
+      "id": "AE3DE142-4D85-2547-DD26-4E90BED35CF7",
+      "Assetnom": "Default__AssaultRifle_BurstPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Phantom",
+      "id": "EE8E8D15-496B-07AC-E5F6-8FAE5D4C7B1A",
+      "Assetnom": "Default__AssaultRifle_ACRPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Judge",
+      "id": "EC845BF4-4F79-DDDA-A3DA-0DB3774B2794",
+      "Assetnom": "Default__AutomaticShotgunPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Bucky",
+      "id": "910BE174-449B-C412-AB22-D0873436B21B",
+      "Assetnom": "Default__PumpShotgunPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Frenzy",
+      "id": "44D4E95C-4157-0037-81B2-17841BF2E8E3",
+      "Assetnom": "Default__AutomaticPistolPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Classic",
+      "id": "29A0CFAB-485B-F5D5-779A-B59F85E204A8",
+      "Assetnom": "Default__BasePistolPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Ghost",
+      "id": "1BAA85B4-4C70-1284-64BB-6481DFC3BB4E",
+      "Assetnom": "Default__LugerPistolPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Sheriff",
+      "id": "E336C6B8-418D-9340-D77F-7A9E4CFE0702",
+      "Assetnom": "Default__RevolverPistolPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Shorty",
+      "id": "42DA8CCC-40D5-AFFC-BEEC-15AA47B42EDA",
+      "Assetnom": "Default__SawedOffShotgunPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Operator",
+      "id": "A03B24D3-4319-996D-0F8C-94BBFBA1DFC7",
+      "Assetnom": "Default__BoltSniperPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Guardian",
+      "id": "4ADE7FAA-4CF1-8376-95EF-39884480959B",
+      "Assetnom": "Default__DMRPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Marshal",
+      "id": "C4883E50-4494-202C-3EC3-6B8A9284F00B",
+      "Assetnom": "Default__LeverSniperPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Spectre",
+      "id": "462080D1-4035-2937-7C09-27AA2A5C27A7",
+      "Assetnom": "Default__MP5PrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    },
+    {
+      "nom": "Stinger",
+      "id": "F7E1B454-4AD4-1063-EC0A-159E56B58941",
+      "Assetnom": "Default__VectorPrimaryAsset_C",
+      "AssetPath": "",
+      "IsEnabled": true
+    }
+  ]
+}

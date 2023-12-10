@@ -1,0 +1,54 @@
+{
+  "competences": [
+    {
+      "id": "106",
+      "nom": "Combat Stim",
+      "description": "Deploys a beacon that grants increased combat power to nearby players."
+    },
+    {
+      "id": "107",
+      "nom": "Crippling Decay",
+      "description": "After a brief delay, all enemies take 50 temporary damage for 8 seconds."
+    },
+    {
+      "id": "108",
+      "nom": "Damage Amp",
+      "description": "Increases player's damage by 30% for the round."
+    },
+    {
+      "id": "109",
+      "nom": "Golden Gun",
+      "description": "One-shot, one-kill weapon that's fully accurate on the move. Getting a kill grants bonus ammo."
+    },
+    {
+      "id": "110",
+      "nom": "Health Regen",
+      "description": "For the next 20 seconds, all allies have out-of-combat health regeneration."
+    },
+    {
+      "id": "111",
+      "nom": "Paranoia",
+      "description": "Enemies become paranoid: they have tunnel vision and hear decoy audio. Lasts 8 seconds."
+    },
+    {
+      "id": "112",
+      "nom": "Tracer Rounds",
+      "description": "All allied gunshots gain increased penetration and briefly reveal enemies through walls."
+    },
+    {
+      "id": "113",
+      "nom": "Twin Hunters",
+      "description": "Summons two hunting wolves that chase down the two nearest enemies, slowing and nearsighting them when caught."
+    },
+    {
+      "id": "114",
+      "nom": "Ultimate Ability",
+      "description": "Fully charges player's ultimate."
+    },
+    {
+      "id": "115",
+      "nom": "Weapon Upgrade",
+      "description": "Grants player a more powerful weapon."
+    }
+  ]
+}

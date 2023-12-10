@@ -1,0 +1,122 @@
+{
+  "maps": [
+    {
+      "id": "1",
+      "nom": "Bind",
+      "lieu": "Morocco",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "106"
+      ]
+    },
+    {
+      "id": "2",
+      "nom": "Haven",
+      "lieu": "Bhutan",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "107"
+      ]
+    },
+    {
+      "id": "3",
+      "nom": "Split",
+      "lieu": "Japan",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "108"
+      ]
+    },
+    {
+      "id": "4",
+      "nom": "Ascent",
+      "lieu": "Italy",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "109"
+      ]
+    },
+    {
+      "id": "5",
+      "nom": "Icebox",
+      "lieu": "Russia",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "110"
+      ]
+    },
+    {
+      "id": "6",
+      "nom": "Breeze",
+      "lieu": "Atlantic Ocean",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "111"
+      ]
+    },
+    {
+      "id": "7",
+      "nom": "Fracture",
+      "lieu": "USA",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "112"
+      ]
+    },
+    {
+      "id": "8",
+      "nom": "Pearl",
+      "lieu": "Portugal",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "113"
+      ]
+    },
+    {
+      "id": "9",
+      "nom": "Lotus",
+      "lieu": "India",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "114"
+      ]
+    },
+    {
+      "id": "10",
+      "nom": "Sunset",
+      "lieu": "USA",
+      "type": "Bomb Defusal",
+      "orbesDeCompetence": [
+        "115"
+      ]
+    },
+    {
+      "id": "11",
+      "nom": "District",
+      "lieu": "Split",
+      "type": "Team Deathmatch",
+      "orbesDeCompetence": []
+    },
+    {
+      "id": "12",
+      "nom": "Kasbah",
+      "lieu": "Bind",
+      "type": "Team Deathmatch",
+      "orbesDeCompetence": []
+    },
+    {
+      "id": "13",
+      "nom": "Piazza",
+      "lieu": "Ascent",
+      "type": "Team Deathmatch",
+      "orbesDeCompetence": []
+    },
+    {
+      "id": "14",
+      "nom": "Drift",
+      "lieu": "idk",
+      "type": "Team Deathmatch",
+      "orbesDeCompetence": []
+    }
+  ]
+}

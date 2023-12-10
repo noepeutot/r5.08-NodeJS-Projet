@@ -1,0 +1,484 @@
+{
+  "armes": [
+    {
+      "id": "1",
+      "nom": "Odin",
+      "type": "Machine Gun",
+      "prix": 3200,
+      "skins": [
+        "1"
+      ]
+    },
+    {
+      "id": "2",
+      "nom": "Ares",
+      "type": "Machine Gun",
+      "prix": 1600,
+      "skins": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "3",
+      "nom": "Vandal",
+      "type": "Rifle",
+      "prix": 2900,
+      "skins": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "id": "4",
+      "nom": "Bulldog",
+      "type": "Rifle",
+      "prix": 2100,
+      "skins": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "5",
+      "nom": "Phantom",
+      "type": "Rifle",
+      "prix": 2900,
+      "skins": [
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "id": "6",
+      "nom": "Judge",
+      "type": "Shotgun",
+      "skins": [
+        "13",
+        "14"
+      ]
+    },
+    {
+      "id": "7",
+      "nom": "Bucky",
+      "type": "Shotgun",
+      "prix": 900,
+      "skins": [
+        "15"
+      ]
+    },
+    {
+      "id": "8",
+      "nom": "Frenzy",
+      "type": "Sidearm",
+      "prix": 500,
+      "skins": [
+        "16",
+        "17",
+        "18"
+      ]
+    },
+    {
+      "id": "9",
+      "nom": "Classic",
+      "type": "Sidearm",
+      "prix": 0,
+      "skins": [
+        "19",
+        "20",
+        "21",
+        "22",
+        "23"
+      ]
+    },
+    {
+      "id": "10",
+      "nom": "Ghost",
+      "type": "Sidearm",
+      "prix": 500,
+      "skins": [
+        "24",
+        "25",
+        "26",
+        "27",
+        "28"
+      ]
+    },
+    {
+      "id": "11",
+      "nom": "Sheriff",
+      "type": "Sidearm",
+      "prix": 900,
+      "skins": [
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ]
+    },
+    {
+      "id": "12",
+      "nom": "Shorty",
+      "type": "Sidearm",
+      "prix": 200,
+      "skins": [
+        "35",
+        "36"
+      ]
+    },
+    {
+      "id": "13",
+      "nom": "Operator",
+      "type": "Sniper Rifle",
+      "prix": 4500,
+      "skins": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41"
+      ]
+    },
+    {
+      "id": "14",
+      "nom": "Guardian",
+      "type": "Rifle",
+      "prix": 2400,
+      "skins": [
+        "42"
+      ]
+    },
+    {
+      "id": "15",
+      "nom": "Marshal",
+      "type": "Sniper Rifle",
+      "prix": 1000,
+      "skins": [
+        "43",
+        "44"
+      ]
+    },
+    {
+      "id": "16",
+      "nom": "Spectre",
+      "type": "SMG",
+      "prix": 1600,
+      "skins": [
+        "45",
+        "46",
+        "47",
+        "48"
+      ]
+    },
+    {
+      "id": "17",
+      "nom": "Stinger",
+      "type": "SMG",
+      "prix": 1100,
+      "skins": [
+        "49"
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "id": "1",
+      "nom": "HMG-50 Odin",
+      "prix": 3000,
+      "armeId": "1"
+    },
+    {
+      "id": "2",
+      "nom": "Prism Ares",
+      "prix": 700,
+      "armeId": "2"
+    },
+    {
+      "id": "3",
+      "nom": "LSW-RF Ares",
+      "prix": 3100,
+      "armeId": "2"
+    },
+    {
+      "id": "4",
+      "nom": "Reaver Vandal",
+      "prix": 1800,
+      "armeId": "3"
+    },
+    {
+      "id": "5",
+      "nom": "Avalanche Vandal",
+      "prix": 2500,
+      "armeId": "3"
+    },
+    {
+      "id": "6",
+      "nom": "Luxe Vandal",
+      "prix": 3200,
+      "armeId": "3"
+    },
+    {
+      "id": "7",
+      "nom": "AR-762 Vandal",
+      "prix": 600,
+      "armeId": "3"
+    },
+    {
+      "id": "8",
+      "nom": "Ronin Bulldog",
+      "prix": 2500,
+      "armeId": "4"
+    },
+    {
+      "id": "9",
+      "nom": "3X-PDR Bulldog",
+      "prix": 1700,
+      "armeId": "4"
+    },
+    {
+      "id": "10",
+      "nom": "Avalanche Phantom",
+      "prix": 700,
+      "armeId": "5"
+    },
+    {
+      "id": "11",
+      "nom": "Prism Phantom",
+      "prix": 1800,
+      "armeId": "5"
+    },
+    {
+      "id": "12",
+      "nom": "SW-ACR Phantom",
+      "prix": 2100,
+      "armeId": "5"
+    },
+    {
+      "id": "13",
+      "nom": "Luxe Judge",
+      "prix": 3000,
+      "armeId": "6"
+    },
+    {
+      "id": "14",
+      "nom": "ACS-12 Judge",
+      "prix": 2100,
+      "armeId": "6"
+    },
+    {
+      "id": "15",
+      "nom": "PA-12 Bucky",
+      "prix": 900,
+      "armeId": "7"
+    },
+    {
+      "id": "16",
+      "nom": "Breach's Frenzy",
+      "prix": 1700,
+      "armeId": "8"
+    },
+    {
+      "id": "17",
+      "nom": "Phoenix's Frenzy",
+      "prix": 1600,
+      "armeId": "8"
+    },
+    {
+      "id": "18",
+      "nom": "AMP-11 Frenzy",
+      "prix": 3100,
+      "armeId": "8"
+    },
+    {
+      "id": "19",
+      "nom": "Raze's Classic",
+      "prix": 2600,
+      "armeId": "9"
+    },
+    {
+      "id": "20",
+      "nom": "Avalanche Classic",
+      "prix": 1500,
+      "armeId": "9"
+    },
+    {
+      "id": "21",
+      "nom": "BP-9 Classic",
+      "prix": 3500,
+      "armeId": "9"
+    },
+    {
+      "id": "22",
+      "nom": "Sage's Classic",
+      "prix": 1000,
+      "armeId": "9"
+    },
+    {
+      "id": "23",
+      "nom": "Imperium Classic",
+      "prix": 3400,
+      "armeId": "9"
+    },
+    {
+      "id": "24",
+      "nom": "Cypher's Ghost",
+      "prix": 3100,
+      "armeId": "10"
+    },
+    {
+      "id": "25",
+      "nom": "Prism Ghost",
+      "prix": 600,
+      "armeId": "10"
+    },
+    {
+      "id": "26",
+      "nom": "Luxe Ghost",
+      "prix": 2500,
+      "armeId": "10"
+    },
+    {
+      "id": "27",
+      "nom": "LP-15 Ghost",
+      "prix": 2300,
+      "armeId": "10"
+    },
+    {
+      "id": "28",
+      "nom": "Omen's Ghost",
+      "prix": 2000,
+      "armeId": "10"
+    },
+    {
+      "id": "29",
+      "nom": "Reaver Sheriff",
+      "prix": 1000,
+      "armeId": "11"
+    },
+    {
+      "id": "30",
+      "nom": "Sova's Sheriff",
+      "prix": 3200,
+      "armeId": "11"
+    },
+    {
+      "id": "31",
+      "nom": "Ronin Sheriff",
+      "prix": 2100,
+      "armeId": "11"
+    },
+    {
+      "id": "32",
+      "nom": "Brimstone's Sheriff",
+      "prix": 1600,
+      "armeId": "11"
+    },
+    {
+      "id": "33",
+      "nom": "SAR-6 Sheriff",
+      "prix": 3100,
+      "armeId": "11"
+    },
+    {
+      "id": "34",
+      "nom": "Jett's Sheriff",
+      "prix": 1000,
+      "armeId": "11"
+    },
+    {
+      "id": "35",
+      "nom": "Viper's Shorty",
+      "prix": 1000,
+      "armeId": "12"
+    },
+    {
+      "id": "36",
+      "nom": "DBS-20 Shorty",
+      "prix": 1000,
+      "armeId": "12"
+    },
+    {
+      "id": "37",
+      "nom": "Reaver Operator",
+      "prix": 500,
+      "armeId": "13"
+    },
+    {
+      "id": "38",
+      "nom": "Prism Operator",
+      "prix": 700,
+      "armeId": "13"
+    },
+    {
+      "id": "39",
+      "nom": "Luxe Operator",
+      "prix": 1800,
+      "armeId": "13"
+    },
+    {
+      "id": "40",
+      "nom": "Ronin Operator",
+      "prix": 2900,
+      "armeId": "13"
+    },
+    {
+      "id": "41",
+      "nom": "BSW-460 Operator",
+      "prix": 1400,
+      "armeId": "13"
+    },
+    {
+      "id": "42",
+      "nom": "DMR-04 Guardian",
+      "prix": 1600,
+      "armeId": "14"
+    },
+    {
+      "id": "43",
+      "nom": "Avalanche Marshal",
+      "prix": 2500,
+      "armeId": "15"
+    },
+    {
+      "id": "44",
+      "nom": "LAR-1887 Marshal",
+      "prix": 1100,
+      "armeId": "15"
+    },
+    {
+      "id": "45",
+      "nom": "Avalanche Spectre",
+      "prix": 1700,
+      "armeId": "16"
+    },
+    {
+      "id": "46",
+      "nom": "Prism Spectre",
+      "prix": 2900,
+      "armeId": "16"
+    },
+    {
+      "id": "47",
+      "nom": "Luxe Spectre",
+      "prix": 1900,
+      "armeId": "16"
+    },
+    {
+      "id": "48",
+      "nom": "SMG-9 Spectre",
+      "prix": 900,
+      "armeId": "16"
+    },
+    {
+      "id": "49",
+      "nom": "CQ-SBR Stinger",
+      "prix": 2000,
+      "armeId": "17"
+    }
+  ]
+}
