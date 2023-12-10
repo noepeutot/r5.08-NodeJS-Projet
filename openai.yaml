@@ -135,7 +135,6 @@ paths:
       responses:
         "200":
           description: L'arme a correctement été ajoutée.
-
   /armes/{id}/:
     get:
       tags:
@@ -224,7 +223,6 @@ paths:
         "200":
           description: Le skin a correctement été ajoutée.
 
-
   /skins/:
     get:
       tags:
@@ -254,7 +252,6 @@ paths:
       responses:
         "200":
           description: Le skin a correctement été ajouté.
-
   /skins/{id}/:
     get:
       tags:
@@ -306,7 +303,6 @@ paths:
       responses:
         "200":
           description: La map a correctement été ajoutée.
-
   /maps/{id}/:
     get:
       tags:
@@ -358,7 +354,6 @@ paths:
       responses:
         "200":
           description: L'agent a correctement été ajouté.
-
   /agents/{id}/:
     get:
       tags:
@@ -410,7 +405,6 @@ paths:
       responses:
         "200":
           description: La compétence a correctement été ajoutée.
-
   /competences/{id}/:
     get:
       tags:

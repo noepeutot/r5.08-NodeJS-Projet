@@ -16,6 +16,10 @@ Chaque arme possède des skins qui lui appartiennent.
 Les données utilisées sont des données officielles pour les maps, agents, compétences, armes et skins.
 La classe joueur comme les liens entre a été généré avec chatgpt.
 
+
+
+Pour le prix d'un skin, je n'ai pas pu les récupérer. Pour simplifier, j'ai fais générer un nombre en 500 et 3500 par tranche de 100.
+
 ## Lancement du serveur
 Pour lancer le serveur, se placer dans le repertoire nodejs-server et initialiser node :
 
