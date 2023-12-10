@@ -2,7 +2,7 @@ openapi: 3.0.2
 info:
   version: 1.0.0
   title: API Valorant
-  description: API gestion de Valorant
+  description: Gestionnaire d'API de Valorant
 
 paths:
   /:
@@ -135,6 +135,7 @@ paths:
       responses:
         "200":
           description: L'arme a correctement été ajoutée.
+
   /armes/{id}/:
     get:
       tags:
@@ -159,7 +160,7 @@ paths:
     put:
       tags:
         - Armes
-      summary: Met à jour les informations de l'arme
+      summary: Met à jour les informations de l'arme.
       parameters:
         - name: id
           in: path
@@ -209,19 +210,28 @@ paths:
               schema:
                 type: array
                 x-content-type: application/json
-    post:
+    put:
       tags:
         - Skins
-      summary: Ajoute un nouveau skin à une arme.
-      parameters: []
+      summary: Met à jour les skins d'une arme.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant d'une arme.
+          required: true
+          schema:
+            type: string
       requestBody:
+        description: Une collection d'identifiant de skins.
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/Skin'
       responses:
         "200":
-          description: Le skin a correctement été ajoutée.
+          description: La liste des skins d'une arme a été mise à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune arme.
 
   /skins/:
     get:
@@ -252,6 +262,7 @@ paths:
       responses:
         "200":
           description: Le skin a correctement été ajouté.
+
   /skins/{id}/:
     get:
       tags:
@@ -271,6 +282,43 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Skin'
+        "404":
+          description: L'identifiant ne correspond à aucun skin.
+    put:
+      tags:
+        - Skins
+      summary: Met à jour les informations d'un skin en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant du skin.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Skin'
+      responses:
+        "200":
+          description: Les informations du skin ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucun skin.
+    delete:
+      tags:
+        - Skins
+      summary: Supprime un skin en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant du skin.
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Le skin a été supprimé avec succès.
         "404":
           description: L'identifiant ne correspond à aucun skin.
 
@@ -303,6 +351,7 @@ paths:
       responses:
         "200":
           description: La map a correctement été ajoutée.
+
   /maps/{id}/:
     get:
       tags:
@@ -322,6 +371,91 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Map'
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+    put:
+      tags:
+        - Maps
+      summary: Met à jour les informations d'une map en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de la map.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Map'
+      responses:
+        "200":
+          description: Les informations de la map ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+    delete:
+      tags:
+        - Maps
+      summary: Supprime une map en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de la map.
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: La map a été supprimée avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+  /maps/{id}/orbes_competence:
+    get:
+      tags:
+        - Maps
+      summary: Liste les orbes de compétence d'une map en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de la map.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Une collection d'orbes de compétence est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Competence'
+        "404":
+          description: L'identifiant ne correspond à aucune map.
+
+    put:
+      tags:
+        - Maps
+      summary: Met à jour les orbes de compétence d'une map en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de la map.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Une collection d'identifiant d'orbes de compétence.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+      responses:
+        "200":
+          description: Les orbes de compétence de la map ont été correctement mis à jour.
         "404":
           description: L'identifiant ne correspond à aucune map.
 
@@ -354,6 +488,7 @@ paths:
       responses:
         "200":
           description: L'agent a correctement été ajouté.
+
   /agents/{id}/:
     get:
       tags:
@@ -376,6 +511,93 @@ paths:
         "404":
           description: L'identifiant ne correspond à aucun agent.
 
+    put:
+      tags:
+        - Agents
+      summary: Met à jour les informations d'un agent en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de l'agent.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        "200":
+          description: Les informations de l'agent ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+
+    delete:
+      tags:
+        - Agents
+      summary: Supprime un agent en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de l'agent.
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: L'agent a été supprimé avec succès.
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+
+  /agents/{id}/competences/:
+    get:
+      tags:
+        - Agents
+      summary: Liste les compétences d'un agent en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de l'agent.
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Une collection de compétences de l'agent est retournée.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Competence'
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
+
+    put:
+      tags:
+        - Agents
+      summary: Met à jour les compétences d'un agent en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de l'agent.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Une collection d'identifiants de compétences.
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+      responses:
+        "200":
+          description: Les compétences de l'agent ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucun agent.
   /competences/:
     get:
       tags:
@@ -405,6 +627,7 @@ paths:
       responses:
         "200":
           description: La compétence a correctement été ajoutée.
+
   /competences/{id}/:
     get:
       tags:
@@ -424,6 +647,45 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Competence'
+        "404":
+          description: L'identifiant ne correspond à aucune compétence.
+
+    put:
+      tags:
+        - Competences
+      summary: Met à jour les informations d'une compétence en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de la compétence.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Competence'
+      responses:
+        "200":
+          description: Les informations de la compétence ont été correctement mises à jour.
+        "404":
+          description: L'identifiant ne correspond à aucune compétence.
+
+    delete:
+      tags:
+        - Competences
+      summary: Supprime une compétence en fonction de son identifiant.
+      parameters:
+        - name: id
+          in: path
+          description: L'identifiant de la compétence.
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: La compétence a été supprimée avec succès.
         "404":
           description: L'identifiant ne correspond à aucune compétence.
 
@@ -524,7 +786,7 @@ components:
           type: string
         type:
           type: string
-        competence:
+        competences:
           type: array
   parameters:
     pageParam:
