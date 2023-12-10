@@ -23,7 +23,7 @@ exports.rootGET = function () {
           {
             href: '/joueurs/',
             rel: 'joueurs',
-            method: 'PUT'
+            method: 'POST'
           },
           {
             href: '/armes/',
@@ -33,7 +33,7 @@ exports.rootGET = function () {
           {
             href: '/armes/',
             rel: 'armes',
-            method: 'PUT'
+            method: 'POST'
           },
           {
             href: '/skins/',
@@ -43,7 +43,7 @@ exports.rootGET = function () {
           {
             href: '/skins/',
             rel: 'skins',
-            method: 'PUT'
+            method: 'POST'
           },
           {
             href: '/maps/',
@@ -53,7 +53,7 @@ exports.rootGET = function () {
           {
             href: '/maps/',
             rel: 'maps',
-            method: 'PUT'
+            method: 'POST'
           },
           {
             href: '/agents/',
@@ -63,7 +63,7 @@ exports.rootGET = function () {
           {
             href: '/agents/',
             rel: 'agents',
-            method: 'PUT'
+            method: 'POST'
           },
           {
             href: '/competences/',
@@ -73,7 +73,7 @@ exports.rootGET = function () {
           {
             href: '/competences/',
             rel: 'competences',
-            method: 'PUT'
+            method: 'POST'
           }
         ];
 

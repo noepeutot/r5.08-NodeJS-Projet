@@ -8,31 +8,139 @@
   },
   "joueurs": [
     {
+      "id": "1",
+      "pseudo": "Something",
+      "niveau": "256",
+      "rank": "Immortel",
+      "agentSelectionneId": "1",
+      "mapSelectionneeId": "1",
+      "armeSelectionneeId": "1"
+    },
+    {
       "id": "2",
-      "pseudo": "Player2",
-      "niveau": "15",
-      "rank": "Platinum",
+      "pseudo": "Tenz",
+      "niveau": "654",
+      "rank": "Radiant",
       "agentSelectionneId": "1",
       "mapSelectionneeId": "1",
       "armeSelectionneeId": "1"
     },
     {
       "id": "3",
-      "pseudo": "Player3",
-      "niveau": "8",
-      "rank": "Silver",
+      "pseudo": "Scream",
+      "niveau": "486",
+      "rank": "Immortel",
       "agentSelectionneId": "2",
       "mapSelectionneeId": "2",
       "armeSelectionneeId": "2"
     },
     {
-      "id": "1",
-      "pseudo": "Player1",
-      "niveau": "20",
+      "id": "4",
+      "pseudo": "EagleEye",
+      "niveau": "185",
+      "rank": "Diamond",
+      "agentSelectionneId": "4",
+      "mapSelectionneeId": "1",
+      "armeSelectionneeId": "4"
+    },
+    {
+      "id": "5",
+      "pseudo": "ThunderStriker",
+      "niveau": "87",
+      "rank": "Bronze",
+      "agentSelectionneId": "1",
+      "mapSelectionneeId": "2",
+      "armeSelectionneeId": "3"
+    },
+    {
+      "id": "6",
+      "pseudo": "LunarWarlock",
+      "niveau": "56",
+      "rank": "Platinum",
+      "agentSelectionneId": "3",
+      "mapSelectionneeId": "3",
+      "armeSelectionneeId": "2"
+    },
+    {
+      "id": "7",
+      "pseudo": "StormChaser",
+      "niveau": "14",
       "rank": "Gold",
+      "agentSelectionneId": "2",
+      "mapSelectionneeId": "1",
+      "armeSelectionneeId": "4"
+    },
+    {
+      "id": "8",
+      "pseudo": "FrostGuardian",
+      "niveau": "10",
+      "rank": "Silver",
+      "agentSelectionneId": "1",
+      "mapSelectionneeId": "3",
+      "armeSelectionneeId": "2"
+    },
+    {
+      "id": "9",
+      "pseudo": "Nightshade",
+      "niveau": "28",
+      "rank": "Diamond",
       "agentSelectionneId": "3",
       "mapSelectionneeId": "2",
+      "armeSelectionneeId": "1"
+    },
+    {
+      "id": "10",
+      "pseudo": "RapidSpecter",
+      "niveau": "6",
+      "rank": "Bronze",
+      "agentSelectionneId": "4",
+      "mapSelectionneeId": "1",
+      "armeSelectionneeId": "3"
+    },
+    {
+      "id": "11",
+      "pseudo": "VortexWarrior",
+      "niveau": "18",
+      "rank": "Platinum",
+      "agentSelectionneId": "2",
+      "mapSelectionneeId": "2",
+      "armeSelectionneeId": "1"
+    },
+    {
+      "id": "12",
+      "pseudo": "SpectralPhoenix",
+      "niveau": "22",
+      "rank": "Diamond",
+      "agentSelectionneId": "3",
+      "mapSelectionneeId": "3",
+      "armeSelectionneeId": "4"
+    },
+    {
+      "id": "13",
+      "pseudo": "BlazeStrider",
+      "niveau": "10",
+      "rank": "Silver",
+      "agentSelectionneId": "1",
+      "mapSelectionneeId": "1",
       "armeSelectionneeId": "2"
+    },
+    {
+      "id": "14",
+      "pseudo": "RapidPhantom",
+      "niveau": "15",
+      "rank": "Gold",
+      "agentSelectionneId": "4",
+      "mapSelectionneeId": "2",
+      "armeSelectionneeId": "3"
+    },
+    {
+      "id": "15",
+      "pseudo": "FrostGuard",
+      "niveau": "7",
+      "rank": "Bronze",
+      "agentSelectionneId": "1",
+      "mapSelectionneeId": "3",
+      "armeSelectionneeId": "1"
     }
   ],
   "armes": [

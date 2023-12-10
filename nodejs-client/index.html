@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Interface</title>
+    <title>Valorant Information Viewer</title>
 </head>
 <body>
+<h1>Informations Valorant</h1>
 
-<h1>Client Interface</h1>
+<div id="info-container">
+    <div id="nom">Nom : </div>
+    <div id="dateCreation">Date de création : </div>
+    <div id="modeDeJeu">Mode de jeu : </div>
+    <div id="editeur">Éditeur : </div>
+    <div id="plateforme">Plateforme : </div>
+</div>
 
-<button onclick="fetchData()">Get Data from Server</button>
+<div id="links-container">
+    <h2>Liens</h2>
+    <ul id="links-list"></ul>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script>
-    async function fetchData() {
-        try {
-            const response = await axios.get('http://localhost:8080/'); // Remplacez avec l'URL de votre API
-            console.log('Data from server:', response.data);
-            // Faites quelque chose avec les données récupérées, par exemple, mettez-les dans le DOM
-        } catch (error) {
-            console.error('Error fetching data from server:', error.message);
-        }
-    }
-</script>
+<script src="models/valorant.model.js"></script>
+<script src="views/valorant.view.js"></script>
+<script src="controllers/valorant.controller.js"></script>
+
 </body>
 </html>
