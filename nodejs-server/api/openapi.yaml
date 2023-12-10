@@ -584,7 +584,7 @@ paths:
         "404":
           description: L'identifiant ne correspond à aucune map.
       x-swagger-router-controller: Maps
-  /maps/{id}/orbes_competence:
+  /maps/{id}/orbes_competence/:
     get:
       tags:
       - Maps

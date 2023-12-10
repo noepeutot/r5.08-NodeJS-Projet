@@ -113,6 +113,16 @@ exports.mapsIdGET = function (id) {
             href: `/maps/${id}/`,
             rel: 'self',
             method: 'PUT'
+          },
+          {
+            href: `/maps/${id}/orbes_competence/`,
+            rel: 'competences',
+            method: 'GET'
+          },
+          {
+            href: `/maps/${id}/orbes_competence/`,
+            rel: 'competences',
+            method: 'PUT'
           }
         ];
 
@@ -175,7 +185,7 @@ exports.mapsIdOrbes_competenceGET = function (id) {
             id: orbeId,
             links: [
               {
-                href: `/competence/${orbeId}/`,
+                href: `/competences/${orbeId}/`,
                 rel: 'competences',
                 method: 'GET'
               }

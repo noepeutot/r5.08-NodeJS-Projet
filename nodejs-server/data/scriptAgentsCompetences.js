@@ -11,7 +11,8 @@ const filteredData = {
 };
 
 // Compteur pour générer des IDs
-let idCounter = 1;
+let idCounterAgent = 1;
+let idCounterCompetences = 1;
 
 // Parcourir chaque élément dans la liste "data"
 data.data.forEach(agent => {
@@ -20,7 +21,7 @@ data.data.forEach(agent => {
 
     // Extraire les informations nécessaires pour l'agent
     const filteredAgent = {
-        id: idCounter.toString(), // ID simplifié pour l'agent
+        id: idCounterAgent.toString(), // ID simplifié pour l'agent
         nom: agent.displayName,
         type: roleDisplayName, // Remplacer 'role' par 'type'
         competences: [] // Remplacer 'abilityIds' par 'competences'
@@ -32,7 +33,7 @@ data.data.forEach(agent => {
     // Parcourir chaque ability de l'agent
     agent.abilities.forEach(ability => {
         // Générer un ID unique pour l'ability
-        const competenceId = idCounter.toString(); // ID simplifié pour la compétence
+        const competenceId = idCounterCompetences.toString(); // ID simplifié pour la compétence
 
         // Ajouter l'ID de la compétence à la liste associée à l'agent
         filteredAgent.competences.push(competenceId);
@@ -48,11 +49,11 @@ data.data.forEach(agent => {
         filteredData.competences.push(filteredCompetence);
 
         // Incrémenter le compteur d'IDs
-        idCounter++;
+        idCounterCompetences++;
     });
 
     // Incrémenter le compteur d'IDs pour l'agent lui-même
-    idCounter++;
+    idCounterAgent++;
 });
 
 // Écrire les données filtrées dans un nouveau fichier JSON

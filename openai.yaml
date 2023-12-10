@@ -135,7 +135,6 @@ paths:
       responses:
         "200":
           description: L'arme a correctement été ajoutée.
-
   /armes/{id}/:
     get:
       tags:
@@ -262,7 +261,6 @@ paths:
       responses:
         "200":
           description: Le skin a correctement été ajouté.
-
   /skins/{id}/:
     get:
       tags:
@@ -351,7 +349,6 @@ paths:
       responses:
         "200":
           description: La map a correctement été ajoutée.
-
   /maps/{id}/:
     get:
       tags:
@@ -410,7 +407,7 @@ paths:
           description: La map a été supprimée avec succès.
         "404":
           description: L'identifiant ne correspond à aucune map.
-  /maps/{id}/orbes_competence:
+  /maps/{id}/orbes_competence/:
     get:
       tags:
         - Maps
@@ -488,7 +485,6 @@ paths:
       responses:
         "200":
           description: L'agent a correctement été ajouté.
-
   /agents/{id}/:
     get:
       tags:
@@ -549,7 +545,6 @@ paths:
           description: L'agent a été supprimé avec succès.
         "404":
           description: L'identifiant ne correspond à aucun agent.
-
   /agents/{id}/competences/:
     get:
       tags:
@@ -598,6 +593,7 @@ paths:
           description: Les compétences de l'agent ont été correctement mises à jour.
         "404":
           description: L'identifiant ne correspond à aucun agent.
+
   /competences/:
     get:
       tags:
@@ -627,7 +623,6 @@ paths:
       responses:
         "200":
           description: La compétence a correctement été ajoutée.
-
   /competences/{id}/:
     get:
       tags:

@@ -38,71 +38,483 @@
   "armes": [
     {
       "id": "1",
-      "nom": "Vandal",
-      "type": "Rifle",
-      "prix": 2900,
+      "nom": "Odin",
+      "type": "Machine Gun",
+      "prix": 3200,
       "skins": [
-        "1",
-        "3"
+        "1"
       ]
     },
     {
       "id": "2",
-      "nom": "Phantom",
-      "type": "Rifle",
-      "prix": 2800,
+      "nom": "Ares",
+      "type": "Machine Gun",
+      "prix": 1600,
       "skins": [
         "2",
-        "4"
+        "3"
       ]
     },
     {
       "id": "3",
-      "nom": "Sheriff",
-      "type": "Pistol",
-      "prix": 800,
+      "nom": "Vandal",
+      "type": "Rifle",
+      "prix": 2900,
       "skins": [
+        "4",
         "5",
-        "6"
+        "6",
+        "7"
+      ]
+    },
+    {
+      "id": "4",
+      "nom": "Bulldog",
+      "type": "Rifle",
+      "prix": 2100,
+      "skins": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "id": "5",
+      "nom": "Phantom",
+      "type": "Rifle",
+      "prix": 2900,
+      "skins": [
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "id": "6",
+      "nom": "Judge",
+      "type": "Shotgun",
+      "skins": [
+        "13",
+        "14"
+      ]
+    },
+    {
+      "id": "7",
+      "nom": "Bucky",
+      "type": "Shotgun",
+      "prix": 900,
+      "skins": [
+        "15"
+      ]
+    },
+    {
+      "id": "8",
+      "nom": "Frenzy",
+      "type": "Sidearm",
+      "prix": 500,
+      "skins": [
+        "16",
+        "17",
+        "18"
+      ]
+    },
+    {
+      "id": "9",
+      "nom": "Classic",
+      "type": "Sidearm",
+      "prix": 0,
+      "skins": [
+        "19",
+        "20",
+        "21",
+        "22",
+        "23"
+      ]
+    },
+    {
+      "id": "10",
+      "nom": "Ghost",
+      "type": "Sidearm",
+      "prix": 500,
+      "skins": [
+        "24",
+        "25",
+        "26",
+        "27",
+        "28"
+      ]
+    },
+    {
+      "id": "11",
+      "nom": "Sheriff",
+      "type": "Sidearm",
+      "prix": 900,
+      "skins": [
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ]
+    },
+    {
+      "id": "12",
+      "nom": "Shorty",
+      "type": "Sidearm",
+      "prix": 200,
+      "skins": [
+        "35",
+        "36"
+      ]
+    },
+    {
+      "id": "13",
+      "nom": "Operator",
+      "type": "Sniper Rifle",
+      "prix": 4500,
+      "skins": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41"
+      ]
+    },
+    {
+      "id": "14",
+      "nom": "Guardian",
+      "type": "Rifle",
+      "prix": 2400,
+      "skins": [
+        "42"
+      ]
+    },
+    {
+      "id": "15",
+      "nom": "Marshal",
+      "type": "Sniper Rifle",
+      "prix": 1000,
+      "skins": [
+        "43",
+        "44"
+      ]
+    },
+    {
+      "id": "16",
+      "nom": "Spectre",
+      "type": "SMG",
+      "prix": 1600,
+      "skins": [
+        "45",
+        "46",
+        "47",
+        "48"
+      ]
+    },
+    {
+      "id": "17",
+      "nom": "Stinger",
+      "type": "SMG",
+      "prix": 1100,
+      "skins": [
+        "49"
       ]
     }
   ],
   "skins": [
     {
       "id": "1",
-      "nom": "Valorant Red",
-      "prix": 500,
+      "nom": "HMG-50 Odin",
+      "prix": 3000,
       "armeId": "1"
     },
     {
       "id": "2",
-      "nom": "Ghostly Blue",
-      "prix": 450,
+      "nom": "Prism Ares",
+      "prix": 700,
       "armeId": "2"
     },
     {
       "id": "3",
-      "nom": "Dragonfire",
-      "prix": 600,
-      "armeId": "1"
-    },
-    {
-      "id": "4",
-      "nom": "Revenant",
-      "prix": 550,
+      "nom": "LSW-RF Ares",
+      "prix": 3100,
       "armeId": "2"
     },
     {
+      "id": "4",
+      "nom": "Reaver Vandal",
+      "prix": 1800,
+      "armeId": "3"
+    },
+    {
       "id": "5",
-      "nom": "Golden Age",
-      "prix": 700,
+      "nom": "Avalanche Vandal",
+      "prix": 2500,
       "armeId": "3"
     },
     {
       "id": "6",
-      "nom": "Rogue",
-      "prix": 650,
+      "nom": "Luxe Vandal",
+      "prix": 3200,
       "armeId": "3"
+    },
+    {
+      "id": "7",
+      "nom": "AR-762 Vandal",
+      "prix": 600,
+      "armeId": "3"
+    },
+    {
+      "id": "8",
+      "nom": "Ronin Bulldog",
+      "prix": 2500,
+      "armeId": "4"
+    },
+    {
+      "id": "9",
+      "nom": "3X-PDR Bulldog",
+      "prix": 1700,
+      "armeId": "4"
+    },
+    {
+      "id": "10",
+      "nom": "Avalanche Phantom",
+      "prix": 700,
+      "armeId": "5"
+    },
+    {
+      "id": "11",
+      "nom": "Prism Phantom",
+      "prix": 1800,
+      "armeId": "5"
+    },
+    {
+      "id": "12",
+      "nom": "SW-ACR Phantom",
+      "prix": 2100,
+      "armeId": "5"
+    },
+    {
+      "id": "13",
+      "nom": "Luxe Judge",
+      "prix": 3000,
+      "armeId": "6"
+    },
+    {
+      "id": "14",
+      "nom": "ACS-12 Judge",
+      "prix": 2100,
+      "armeId": "6"
+    },
+    {
+      "id": "15",
+      "nom": "PA-12 Bucky",
+      "prix": 900,
+      "armeId": "7"
+    },
+    {
+      "id": "16",
+      "nom": "Breach's Frenzy",
+      "prix": 1700,
+      "armeId": "8"
+    },
+    {
+      "id": "17",
+      "nom": "Phoenix's Frenzy",
+      "prix": 1600,
+      "armeId": "8"
+    },
+    {
+      "id": "18",
+      "nom": "AMP-11 Frenzy",
+      "prix": 3100,
+      "armeId": "8"
+    },
+    {
+      "id": "19",
+      "nom": "Raze's Classic",
+      "prix": 2600,
+      "armeId": "9"
+    },
+    {
+      "id": "20",
+      "nom": "Avalanche Classic",
+      "prix": 1500,
+      "armeId": "9"
+    },
+    {
+      "id": "21",
+      "nom": "BP-9 Classic",
+      "prix": 3500,
+      "armeId": "9"
+    },
+    {
+      "id": "22",
+      "nom": "Sage's Classic",
+      "prix": 1000,
+      "armeId": "9"
+    },
+    {
+      "id": "23",
+      "nom": "Imperium Classic",
+      "prix": 3400,
+      "armeId": "9"
+    },
+    {
+      "id": "24",
+      "nom": "Cypher's Ghost",
+      "prix": 3100,
+      "armeId": "10"
+    },
+    {
+      "id": "25",
+      "nom": "Prism Ghost",
+      "prix": 600,
+      "armeId": "10"
+    },
+    {
+      "id": "26",
+      "nom": "Luxe Ghost",
+      "prix": 2500,
+      "armeId": "10"
+    },
+    {
+      "id": "27",
+      "nom": "LP-15 Ghost",
+      "prix": 2300,
+      "armeId": "10"
+    },
+    {
+      "id": "28",
+      "nom": "Omen's Ghost",
+      "prix": 2000,
+      "armeId": "10"
+    },
+    {
+      "id": "29",
+      "nom": "Reaver Sheriff",
+      "prix": 1000,
+      "armeId": "11"
+    },
+    {
+      "id": "30",
+      "nom": "Sova's Sheriff",
+      "prix": 3200,
+      "armeId": "11"
+    },
+    {
+      "id": "31",
+      "nom": "Ronin Sheriff",
+      "prix": 2100,
+      "armeId": "11"
+    },
+    {
+      "id": "32",
+      "nom": "Brimstone's Sheriff",
+      "prix": 1600,
+      "armeId": "11"
+    },
+    {
+      "id": "33",
+      "nom": "SAR-6 Sheriff",
+      "prix": 3100,
+      "armeId": "11"
+    },
+    {
+      "id": "34",
+      "nom": "Jett's Sheriff",
+      "prix": 1000,
+      "armeId": "11"
+    },
+    {
+      "id": "35",
+      "nom": "Viper's Shorty",
+      "prix": 1000,
+      "armeId": "12"
+    },
+    {
+      "id": "36",
+      "nom": "DBS-20 Shorty",
+      "prix": 1000,
+      "armeId": "12"
+    },
+    {
+      "id": "37",
+      "nom": "Reaver Operator",
+      "prix": 500,
+      "armeId": "13"
+    },
+    {
+      "id": "38",
+      "nom": "Prism Operator",
+      "prix": 700,
+      "armeId": "13"
+    },
+    {
+      "id": "39",
+      "nom": "Luxe Operator",
+      "prix": 1800,
+      "armeId": "13"
+    },
+    {
+      "id": "40",
+      "nom": "Ronin Operator",
+      "prix": 2900,
+      "armeId": "13"
+    },
+    {
+      "id": "41",
+      "nom": "BSW-460 Operator",
+      "prix": 1400,
+      "armeId": "13"
+    },
+    {
+      "id": "42",
+      "nom": "DMR-04 Guardian",
+      "prix": 1600,
+      "armeId": "14"
+    },
+    {
+      "id": "43",
+      "nom": "Avalanche Marshal",
+      "prix": 2500,
+      "armeId": "15"
+    },
+    {
+      "id": "44",
+      "nom": "LAR-1887 Marshal",
+      "prix": 1100,
+      "armeId": "15"
+    },
+    {
+      "id": "45",
+      "nom": "Avalanche Spectre",
+      "prix": 1700,
+      "armeId": "16"
+    },
+    {
+      "id": "46",
+      "nom": "Prism Spectre",
+      "prix": 2900,
+      "armeId": "16"
+    },
+    {
+      "id": "47",
+      "nom": "Luxe Spectre",
+      "prix": 1900,
+      "armeId": "16"
+    },
+    {
+      "id": "48",
+      "nom": "SMG-9 Spectre",
+      "prix": 900,
+      "armeId": "16"
+    },
+    {
+      "id": "49",
+      "nom": "CQ-SBR Stinger",
+      "prix": 2000,
+      "armeId": "17"
     }
   ],
   "maps": [
@@ -228,8 +640,8 @@
   "agents": [
     {
       "id": "1",
-      "nom": "Jett",
-      "type": "Duelist",
+      "nom": "Fade",
+      "type": "Initiator",
       "competences": [
         "1",
         "2",
@@ -239,75 +651,663 @@
     },
     {
       "id": "2",
-      "nom": "Sage",
-      "type": "Sentinel",
+      "nom": "Breach",
+      "type": "Initiator",
       "competences": [
         "5",
         "6",
-        "7"
+        "7",
+        "8"
       ]
     },
     {
       "id": "3",
+      "nom": "Raze",
+      "type": "Duelist",
+      "competences": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "id": "4",
+      "nom": "Chamber",
+      "type": "Sentinel",
+      "competences": [
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    },
+    {
+      "id": "5",
+      "nom": "KAY/O",
+      "type": "Initiator",
+      "competences": [
+        "17",
+        "18",
+        "19",
+        "20"
+      ]
+    },
+    {
+      "id": "6",
+      "nom": "Skye",
+      "type": "Initiator",
+      "competences": [
+        "21",
+        "22",
+        "23",
+        "24"
+      ]
+    },
+    {
+      "id": "7",
+      "nom": "Cypher",
+      "type": "Sentinel",
+      "competences": [
+        "25",
+        "26",
+        "27",
+        "28"
+      ]
+    },
+    {
+      "id": "8",
+      "nom": "Sova",
+      "type": "Initiator",
+      "competences": [
+        "29",
+        "30",
+        "31",
+        "32",
+        "33"
+      ]
+    },
+    {
+      "id": "9",
+      "nom": "Killjoy",
+      "type": "Sentinel",
+      "competences": [
+        "34",
+        "35",
+        "36",
+        "37"
+      ]
+    },
+    {
+      "id": "10",
+      "nom": "Viper",
+      "type": "Controller",
+      "competences": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ]
+    },
+    {
+      "id": "11",
       "nom": "Phoenix",
       "type": "Duelist",
       "competences": [
-        "8",
-        "9",
-        "10"
+        "43",
+        "44",
+        "45",
+        "46",
+        "47"
+      ]
+    },
+    {
+      "id": "12",
+      "nom": "Astra",
+      "type": "Controller",
+      "competences": [
+        "48",
+        "49",
+        "50",
+        "51",
+        "52"
+      ]
+    },
+    {
+      "id": "13",
+      "nom": "Brimstone",
+      "type": "Controller",
+      "competences": [
+        "53",
+        "54",
+        "55",
+        "56"
+      ]
+    },
+    {
+      "id": "14",
+      "nom": "Neon",
+      "type": "Duelist",
+      "competences": [
+        "57",
+        "58",
+        "59",
+        "60"
+      ]
+    },
+    {
+      "id": "15",
+      "nom": "Yoru",
+      "type": "Duelist",
+      "competences": [
+        "61",
+        "62",
+        "63",
+        "64"
+      ]
+    },
+    {
+      "id": "16",
+      "nom": "Sage",
+      "type": "Sentinel",
+      "competences": [
+        "65",
+        "66",
+        "67",
+        "68"
+      ]
+    },
+    {
+      "id": "17",
+      "nom": "Reyna",
+      "type": "Duelist",
+      "competences": [
+        "69",
+        "70",
+        "71",
+        "72"
+      ]
+    },
+    {
+      "id": "18",
+      "nom": "Omen",
+      "type": "Controller",
+      "competences": [
+        "73",
+        "74",
+        "75",
+        "76"
+      ]
+    },
+    {
+      "id": "19",
+      "nom": "Jett",
+      "type": "Duelist",
+      "competences": [
+        "77",
+        "78",
+        "79",
+        "80",
+        "81"
       ]
     }
   ],
   "competences": [
     {
       "id": "1",
-      "nom": "Tailwind",
-      "description": "Permet à Jett de se déplacer rapidement vers la direction regardée."
+      "nom": "Seize",
+      "description": "EQUIP a knot of raw fear. FIRE to throw. The knot drops down after a set time. RE-USE to drop the knot early. The knot ruptures on impact, holding nearby enemies in place. Held enemies are deafened, and decayed."
     },
     {
       "id": "2",
-      "nom": "Cloudburst",
-      "description": "Jett lance une boule de fumée qui éclate en une brève vision obstruée lorsqu'elle atteint le sol."
+      "nom": "Haunt",
+      "description": "EQUIP a haunting watcher. FIRE to throw. The watcher drops down after a set time. RE-USE to drop the watcher early. The watcher lashes out on impact, revealing enemies in its line of sight and creating terror trails to them. Enemies can destroy the watcher."
     },
     {
       "id": "3",
-      "nom": "Updraft",
-      "description": "Jett propulse vers le haut dans les airs."
+      "nom": "Prowler",
+      "description": "EQUIP a prowler. FIRE to send the prowler forward. HOLD FIRE to steer the prowler towards your crosshair. The prowler will chase down the first enemy or terror trail it sees, and nearsight the enemy on impact."
     },
     {
       "id": "4",
-      "nom": "Blade storm",
-      "description": "Armez-vous de plusieurs couteaux de lancer qui font des dégâts modérés et tuent en Headshot."
+      "nom": "Nightfall",
+      "description": "EQUIP the power of nightmare itself. FIRE to unleash a wave of unstoppable nightmare energy. Enemies caught in the wave are marked by terror trails, deafened, and decayed."
     },
     {
       "id": "5",
-      "nom": "Barrier Orb",
-      "description": "Sage crée une barrière solide qui peut être placée sur le terrain."
+      "nom": "Flashpoint",
+      "description": "EQUIP a blinding charge. FIRE the charge to set a fast-acting burst through the wall. The charge detonates to blind all players looking at it."
     },
     {
       "id": "6",
-      "nom": "Healing Orb",
-      "description": "Sage lance un orbe qui soigne les alliés proches au fil du temps."
+      "nom": "Fault Line",
+      "description": "EQUIP a seismic blast. HOLD FIRE to increase the distance. RELEASE to set off the quake, dazing all players in its zone and in a line up to the zone."
     },
     {
       "id": "7",
-      "nom": "Resurrection",
-      "description": "Sage peut ressusciter un allié récemment éliminé."
+      "nom": "Aftershock",
+      "description": "EQUIP a fusion charge. FIRE the charge to set a slow-acting burst through the wall. The burst does heavy damage to anyone caught in its area."
     },
     {
       "id": "8",
-      "nom": "Blaze",
-      "description": "Phoenix lance un orbe qui se transforme en un mur de feu courbé lorsqu'il touche le sol."
+      "nom": "Rolling Thunder",
+      "description": "EQUIP a Seismic Charge. FIRE to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it."
     },
     {
       "id": "9",
-      "nom": "Curveball",
-      "description": "Phoenix lance un éclair courbé qui aveugle tous les regardant dans son champ de vision."
+      "nom": "Blast Pack",
+      "description": "INSTANTLY throw a Blast Pack that will stick to surfaces. RE-USE the ability after deployment to detonate, damaging and moving anything hit."
     },
     {
       "id": "10",
-      "nom": "Run It Back",
-      "description": "Phoenix entre en état d'immortalité, pouvant explorer librement et réapparaître à l'emplacement initial en cas d'élimination."
+      "nom": "Paint Shells",
+      "description": "EQUIP a cluster grenade. FIRE to throw the grenade, which does damage and creates sub-munitions, each doing damage to anyone in their range."
+    },
+    {
+      "id": "11",
+      "nom": "Boom Bot",
+      "description": "EQUIP a Boom Bot. FIRE will deploy the bot, causing it to travel in a straight line on the ground, bouncing off walls. The Boom Bot will lock on to any enemies in its frontal cone and chase them, exploding for heavy damage if it reaches them."
+    },
+    {
+      "id": "12",
+      "nom": "Showstopper",
+      "description": "EQUIP a rocket launcher. FIRE shoots a rocket that does massive area damage on contact with anything."
+    },
+    {
+      "id": "13",
+      "nom": "Rendezvous",
+      "description": "PLACE two teleport anchors. While on the ground and in range of an anchor, REACTIVATE to quickly teleport to the other anchor.  Anchors can be picked up to be REDEPLOYED."
+    },
+    {
+      "id": "14",
+      "nom": "Trademark",
+      "description": "PLACE a trap that scans for enemies. When a visible enemy comes in range, the trap counts down and then destabilizes the terrain around them , creating a lingering field that slows players caught inside of it."
+    },
+    {
+      "id": "15",
+      "nom": "Headhunter",
+      "description": "ACTIVATE to equip a heavy pistol. ALT FIRE with the pistol equipped to aim down sights."
+    },
+    {
+      "id": "16",
+      "nom": "Tour De Force",
+      "description": "ACTIVATE to summon a powerful, custom sniper rifle that will kill an enemy with any direct hit.  Killing an enemy creates a lingering field that slows players caught inside of it."
+    },
+    {
+      "id": "17",
+      "nom": "FRAG/ment",
+      "description": "EQUIP an explosive fragment. FIRE to throw. The fragment sticks to the floor and explodes multiple times, dealing near lethal damage at the center with each explosion."
+    },
+    {
+      "id": "18",
+      "nom": "FLASH/drive",
+      "description": "EQUIP a flash grenade. FIRE to throw. The flash grenade explodes after a short fuse, blinding anyone in line of sight."
+    },
+    {
+      "id": "19",
+      "nom": "ZERO/point",
+      "description": "EQUIP a suppression blade. FIRE to throw. The blade sticks to the first surface it hits, winds up, and suppresses anyone in the radius of the explosion."
+    },
+    {
+      "id": "20",
+      "nom": "NULL/cmd",
+      "description": "INSTANTLY overload with polarized radianite energy that pulses from KAY/O in a massive radius. Enemies hit with pulses are suppressed for a short duration. While overloaded, KAY/O gains combat stim and can be re-stabilized if downed."
+    },
+    {
+      "id": "21",
+      "nom": "Trailblazer",
+      "description": "EQUIP a Tasmanian tiger trinket. FIRE to send out and take control of the predator.  While in control, FIRE to leap forward, exploding in a concussive blast and damaging directly hit enemies."
+    },
+    {
+      "id": "22",
+      "nom": "Guiding Light",
+      "description": "EQUIP a hawk trinket.  FIRE to send it forward.  HOLD FIRE to guide the hawk in the direction of your crosshair. RE-USE while the hawk is in flight to transform it into a flash."
+    },
+    {
+      "id": "23",
+      "nom": "Regrowth",
+      "description": "EQUIP a healing trinket.  HOLD FIRE to channel, healing allies in range and line of sight.  Can be reused until her healing pool is depleted.  Skye cannot heal herself."
+    },
+    {
+      "id": "24",
+      "nom": "Seekers",
+      "description": "EQUIP a Seeker trinket.  FIRE to send out three Seekers to track down the three closest enemies.  If a Seeker reaches its target, it nearsights them."
+    },
+    {
+      "id": "25",
+      "nom": "Cyber Cage",
+      "description": "INSTANTLY toss the cyber cage in front of Cypher. ACTIVATE to create a zone that blocks vision and plays an audio cue when enemies pass through it"
+    },
+    {
+      "id": "26",
+      "nom": "Spycam",
+      "description": "EQUIP a spycam. FIRE to place the spycam at the targeted location. RE-USE this ability to take control of the camera's view. While in control of the camera, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart."
+    },
+    {
+      "id": "27",
+      "nom": "Trapwire",
+      "description": "EQUIP a trapwire. FIRE to place a destructible and covert tripwire at the targeted location, creating a line that spans between the placed location and the wall opposite. Enemy players who cross a tripwire will be tethered, revealed, and dazed after a short period if they do not destroy the device in time. This ability can be picked up to be REDEPLOYED."
+    },
+    {
+      "id": "28",
+      "nom": "Neural Theft",
+      "description": "INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players."
+    },
+    {
+      "id": "29",
+      "nom": "Shock Bolt",
+      "description": "EQUIP a bow with a shock bolt. FIRE to send the explosive bolt forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow."
+    },
+    {
+      "id": "30",
+      "nom": "Recon Bolt",
+      "description": "EQUIP a bow with recon bolt. FIRE to send the recon bolt forward, activating upon collision and revealing the location of nearby enemies caught in the line of sight of the bolt. Enemies can destroy this bolt. HOLD FIRE to extend the range of the projectile. ALTERNATE FIRE to add up to two bounces to this arrow. "
+    },
+    {
+      "id": "31",
+      "nom": "Owl Drone",
+      "description": "EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will reveal the location of any player struck by the dart."
+    },
+    {
+      "id": "32",
+      "nom": "Hunter's Fury",
+      "description": "EQUIP a bow with three long-range, wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active."
+    },
+    {
+      "id": "33",
+      "nom": "Uncanny Marksman",
+      "description": "Sova's custom bow can fire his arrows and bounce them off terrain. Holding fire charges the bow's power, and the bolt is loosed when released. Press alt fire to change the number of bounces.Your arrows can bounce off terrain. Holding left click increases the bow's range trajectory. Right clicking Toggle through the desired number of terrain bounces by right clicking. The arrow is loosed when left click is released."
+    },
+    {
+      "id": "34",
+      "nom": "Nanoswarm",
+      "description": "EQUIP a Nanoswarm grenade. FIRE to throw the grenade. Upon landing, the Nanoswarm goes covert. ACTIVATE the Nanoswarm to deploy a damaging swarm of nanobots.  "
+    },
+    {
+      "id": "35",
+      "nom": "ALARMBOT",
+      "description": "EQUIP a covert Alarmbot. FIRE to deploy a bot that hunts down enemies that get in range.  After reaching its target, the bot explodes and applies Vulnerable to enemies in the area. HOLD EQUIP to recall a deployed bot."
+    },
+    {
+      "id": "36",
+      "nom": "TURRET",
+      "description": "EQUIP a Turret. FIRE to deploy a turret that fires at enemies in a 180 degree cone. HOLD EQUIP to recall the deployed turret."
+    },
+    {
+      "id": "37",
+      "nom": "Lockdown",
+      "description": "EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies."
+    },
+    {
+      "id": "38",
+      "nom": "Poison Cloud",
+      "description": "EQUIP a gas emitter. FIRE to throw the emitter that perpetually remains throughout the round. RE-USE the ability to create a toxic gas cloud at the cost of fuel. This ability can be RE-USED more than once and can be picked up to be REDEPLOYED."
+    },
+    {
+      "id": "39",
+      "nom": "Toxic Screen",
+      "description": "EQUIP a gas emitter launcher that penetrates terrain. FIRE to deploy a long line of gas emitters. RE-USE the ability to create a tall wall of toxic gas at the cost of fuel. This ability can be RE-USED more than once."
+    },
+    {
+      "id": "40",
+      "nom": "Snake Bite",
+      "description": "EQUIP a chemical launcher. FIRE to launch a canister that shatters upon hitting the floor, creating a lingering chemical zone that damages and applies Vulnerable."
+    },
+    {
+      "id": "41",
+      "nom": "Viper's Pit",
+      "description": "EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range of players and maximum health of enemies inside of it. HOLD the ability key to disperse the cloud early."
+    },
+    {
+      "id": "42",
+      "nom": "Toxic",
+      "description": "You gradually generate and replenish the toxin that fuels your abilities.  Enemies that cross through Viper's Poison Cloud, Toxic Screen, or Viper's Pit are instantly inflicted with at least 50 decay. Their decay level increases the longer they remain in contact with it."
+    },
+    {
+      "id": "43",
+      "nom": "Blaze",
+      "description": "EQUIP a flame wall. FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair."
+    },
+    {
+      "id": "44",
+      "nom": "Curveball",
+      "description": "EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right."
+    },
+    {
+      "id": "45",
+      "nom": "Hot Hands",
+      "description": "EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies."
+    },
+    {
+      "id": "46",
+      "nom": "Run it Back",
+      "description": "INSTANTLY place a marker at Phoenix's location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health and the amount of armor he had when the ability was cast."
+    },
+    {
+      "id": "47",
+      "nom": "Heating Up",
+      "description": "PASSIVELY heal Phoenix instead of taking damage when standing in Phoenix's own fire"
+    },
+    {
+      "id": "48",
+      "nom": "Nova Pulse",
+      "description": "Place Stars in Astral Form (Ultimate Key).  ACTIVATE a Star to detonate a Nova Pulse. The Nova Pulse charges briefly then strikes, concussing all players in its area."
+    },
+    {
+      "id": "49",
+      "nom": "Nebula  / Dissipate",
+      "description": "Place Stars in Astral Form (Ultimate Key).   ACTIVATE a Star to transform it into a Nebula (smoke).  USE a Star to Dissipate it, returning the star to be placed in a new location after a delay.  Dissipate briefly forms a fake Nebula at the Star's location before returning."
+    },
+    {
+      "id": "50",
+      "nom": "Gravity Well",
+      "description": "Place Stars in Astral Form (Ultimate Key).  ACTIVATE a Star to form a Gravity Well. Players in the area are pulled toward the center before it explodes, making all players still trapped inside vulnerable."
+    },
+    {
+      "id": "51",
+      "nom": "Astral Form / Cosmic Divide",
+      "description": "ACTIVATE to enter Astral Form where you can place Stars with PRIMARY FIRE. Stars can be reactivated later, transforming them into a Nova Pulse, Nebula, or Gravity Well.  When Cosmic Divide is charged, use SECONDARY FIRE in Astral Form to begin aiming it, then PRIMARY FIRE to select two locations. An infinite Cosmic Divide connects the two points you select. Cosmic Divide blocks bullets and heavily dampens audio."
+    },
+    {
+      "id": "52",
+      "nom": "Astral Form",
+      "description": "ACTIVATE Ultimate to enter Astral Form and PRIMARY FIRE to place Stars. Target Stars with your Nova Pulse, Nebula, or Gravity Well to use those abilities."
+    },
+    {
+      "id": "53",
+      "nom": "Stim Beacon",
+      "description": "INSTANTLY toss down a stim beacon. Upon landing, it creates a field that grants players RapidFire and a speed boost."
+    },
+    {
+      "id": "54",
+      "nom": "Incendiary",
+      "description": "EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone."
+    },
+    {
+      "id": "55",
+      "nom": "Sky Smoke",
+      "description": "EQUIP a tactical map. FIRE to set locations where Brimstone's smoke clouds will land. ALTERNATE FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area."
+    },
+    {
+      "id": "56",
+      "nom": "Orbital Strike",
+      "description": "EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area."
+    },
+    {
+      "id": "57",
+      "nom": "High Gear",
+      "description": "INSTANTLY channel Neon’s power for increased speed. When charged, ALT FIRE to trigger an electric slide. Slide charge resets every two kills."
+    },
+    {
+      "id": "58",
+      "nom": "Relay Bolt",
+      "description": "INSTANTLY throw an energy bolt that bounces once. Upon hitting each surface, the bolt electrifies the ground below with a concussive blast."
+    },
+    {
+      "id": "59",
+      "nom": "Fast Lane",
+      "description": "FIRE two energy lines forward on the ground that extend a short distance or until they hit a surface. The lines rise into walls of static electricity that block vision."
+    },
+    {
+      "id": "60",
+      "nom": "Overdrive",
+      "description": "Unleash Neon’s full power and speed for a short duration. FIRE to channel the power into a deadly lightning beam with high movement accuracy."
+    },
+    {
+      "id": "61",
+      "nom": "FAKEOUT",
+      "description": "EQUIP an echo that transforms into a mirror image of Yoru when activated. FIRE to instantly activate the mirror image and send it forward. ALT FIRE to place an inactive echo. USE to transform an inactive echo into a mirror image and send it forward.  Mirror images explode in a blinding flash when destroyed by enemies."
+    },
+    {
+      "id": "62",
+      "nom": "BLINDSIDE",
+      "description": "EQUIP to rip an unstable dimensional fragment from reality. FIRE to throw the fragment, activating a flash that winds up once it collides with a hard surface in world."
+    },
+    {
+      "id": "63",
+      "nom": "GATECRASH",
+      "description": "EQUIP a rift tether FIRE to send the tether forward ALT FIRE to place a stationary tether ACTIVATE to teleport to the tether's location USE to trigger a fake teleport"
+    },
+    {
+      "id": "64",
+      "nom": "DIMENSIONAL DRIFT",
+      "description": "EQUIP a mask that can see between dimensions. FIRE to drift into Yoru's dimension, unable to be affected or seen by enemies from the outside."
+    },
+    {
+      "id": "65",
+      "nom": "Slow Orb",
+      "description": "EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players caught inside of it."
+    },
+    {
+      "id": "66",
+      "nom": "Healing Orb",
+      "description": "EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time."
+    },
+    {
+      "id": "67",
+      "nom": "Barrier Orb",
+      "description": "EQUIP a barrier orb. FIRE places a wall that fortifies after a few seconds. ALT FIRE rotates the targeter."
+    },
+    {
+      "id": "68",
+      "nom": "Resurrection",
+      "description": "EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health."
+    },
+    {
+      "id": "69",
+      "nom": "Devour",
+      "description": "Soul Harvest: Enemies that die to Reyna, or die within 3 seconds of taking damage from Reyna, leave behind Soul Orbs that last 3 seconds. Devour: INSTANTLY consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If EMPRESS is active, this skill will automatically cast and not consume the Soul Orb."
+    },
+    {
+      "id": "70",
+      "nom": "Dismiss",
+      "description": "INSTANTLY consume a nearby Soul Orb, becoming intangible for a short duration. If EMPRESS is active, also become invisible."
+    },
+    {
+      "id": "71",
+      "nom": "Leer",
+      "description": "EQUIP an ethereal, destructible eye. ACTIVATE to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it."
+    },
+    {
+      "id": "72",
+      "nom": "Empress",
+      "description": "INSTANTLY enter a frenzy, increasing firing, equip and reload speed dramatically. Gain infinite charges of Soul Harvest abilities. When an enemy dies to Reyna, or dies within 3 seconds of taking damage from Reyna, the duration is renewed."
+    },
+    {
+      "id": "73",
+      "nom": "Paranoia",
+      "description": "EQUIP a blinding orb.  FIRE to throw it forward, briefly reducing the vision range and deafening all players it touches. This projectile can pass straight through walls."
+    },
+    {
+      "id": "74",
+      "nom": "Dark Cover",
+      "description": "EQUIP a shadow orb, entering a phased world to place and target the orbs. PRESS the ability key to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. HOLD FIRE while targeting to move the marker further away. HOLD SECONDARY FIRE while targeting to move the marker closer. PRESS RELOAD to toggle normal targeting view."
+    },
+    {
+      "id": "75",
+      "nom": "Shrouded Step",
+      "description": "EQUIP a shrouded step ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location."
+    },
+    {
+      "id": "76",
+      "nom": "From the Shadows",
+      "description": "EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport, or PRESS EQUIP for Omen to cancel his teleport."
+    },
+    {
+      "id": "77",
+      "nom": "Updraft",
+      "description": "INSTANTLY propel Jett high into the air."
+    },
+    {
+      "id": "78",
+      "nom": "Tailwind",
+      "description": "ACTIVATE to prepare a gust of wind for a limited time. RE-USE the wind to propel Jett in the direction she is moving. If Jett is standing still, she propels forward."
+    },
+    {
+      "id": "79",
+      "nom": "Cloudburst",
+      "description": "INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair."
+    },
+    {
+      "id": "80",
+      "nom": "Blade Storm",
+      "description": "EQUIP a set of highly accurate throwing knives. FIRE to throw a single knife and recharge knives on a kill. ALTERNATE FIRE to throw all remaining daggers but does not recharge on a kill."
+    },
+    {
+      "id": "81",
+      "nom": "Drift",
+      "description": "Holding the jump button while falling allows you to glide through the air."
+    },
+    {
+      "id": "106",
+      "nom": "Combat Stim",
+      "description": "Deploys a beacon that grants increased combat power to nearby players."
+    },
+    {
+      "id": "107",
+      "nom": "Crippling Decay",
+      "description": "After a brief delay, all enemies take 50 temporary damage for 8 seconds."
+    },
+    {
+      "id": "108",
+      "nom": "Damage Amp",
+      "description": "Increases player's damage by 30% for the round."
+    },
+    {
+      "id": "109",
+      "nom": "Golden Gun",
+      "description": "One-shot, one-kill weapon that's fully accurate on the move. Getting a kill grants bonus ammo."
+    },
+    {
+      "id": "110",
+      "nom": "Health Regen",
+      "description": "For the next 20 seconds, all allies have out-of-combat health regeneration."
+    },
+    {
+      "id": "111",
+      "nom": "Paranoia",
+      "description": "Enemies become paranoid: they have tunnel vision and hear decoy audio. Lasts 8 seconds."
+    },
+    {
+      "id": "112",
+      "nom": "Tracer Rounds",
+      "description": "All allied gunshots gain increased penetration and briefly reveal enemies through walls."
+    },
+    {
+      "id": "113",
+      "nom": "Twin Hunters",
+      "description": "Summons two hunting wolves that chase down the two nearest enemies, slowing and nearsighting them when caught."
+    },
+    {
+      "id": "114",
+      "nom": "Ultimate Ability",
+      "description": "Fully charges player's ultimate."
+    },
+    {
+      "id": "115",
+      "nom": "Weapon Upgrade",
+      "description": "Grants player a more powerful weapon."
     }
   ]
 }
