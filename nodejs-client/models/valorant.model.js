@@ -3,6 +3,9 @@
 class ValorantModel {
 
     _joueurs = [];
+
+    _joueur = {};
+
     constructor() {
         this.nom = "";
         this.dateCreation = "";
@@ -10,6 +13,8 @@ class ValorantModel {
         this.editeur = "";
         this.plateforme = "";
         this.links = [];
+        this._joueurs = [];
+        this._joueur = [];
     }
 
     async fetchData() {
@@ -51,7 +56,21 @@ class ValorantModel {
      * Retourne une liste de joueurs
      * @returns {[]}
      */
-    get joueurs() {
+    getJoueurs() {
         return this._joueurs;
+    }
+
+    async fetchPlayerData(playerId) {
+        try {
+            const joueursData = await fetch('http://localhost:8080/joueurs/'+playerId+'/');
+            this._joueur = await joueursData.json();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            throw error;
+        }
+    }
+
+    getJoueur() {
+        return this._joueur;
     }
 }

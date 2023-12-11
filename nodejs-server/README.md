@@ -51,17 +51,97 @@ Il est possible de voir la spécification à cette adresse pour se repérer :
 http://localhost:8080/docs/
 ```
 
-Les liens HATEOAS sont aussi réalisés pour savoir quelles méthodes utiliser sur chacunes des routes.
+Les liens HATEOAS sont aussi réalisés pour savoir quelles méthodes utiliser sur chacune des routes.
+
+### Routes
+
+Comment utiliser les différentes routes et les types des paramètres : 
+
+#### POST - Ajouter
+Type de json pour ajouter un nouveau joueur (l'id est automatiquement généré) :
+```
+{
+"pseudo": "pseudo",
+"niveau": "1000",
+"rank": "Bronze",
+"agentSelectionneId": "1",
+"mapSelectionneeId": "1",
+"armeSelectionneeId": "1"
+}
+```
+
+Type de json pour ajouter une nouvelle arme (l'id est automatiquement généré) :
+```
+{
+"nom": "nom",
+"type": "type",
+"prix": 1000,
+"skins": ["1", "2"]
+}
+```
+
+Type de json pour ajouter un nouveau skin (l'id est automatiquement généré) :
+```
+{
+"nom": "nom",
+"prix": 3000,
+"armeId": "1"
+}
+```
+
+Type de json pour ajouter un nouveau map (l'id est automatiquement généré) :
+```
+{
+"nom": "nom",
+"lieu": "lieu",
+"type": "type",
+"orbesDeCompetence": ["999", "998"]
+}
+```
+Type de json pour ajouter un nouvel agent (l'id est automatiquement généré) :
+```
+{
+"nom": "nom",
+"type": "type",
+"competences": ["999", "998", "997", "996"]
+}
+```
+Type de json pour ajouter une nouvelle compétence (l'id est automatiquement généré) :
+```
+{
+"nom": "nom",
+"description": "la description"
+}
+```
+
+#### PUT - Modifier
+
+Il faut juste se placer sur la page d'un object avec son id par exemple :
+```http://localhost:8080/agents/1/```
+
+Et pour modifier, on peut simplement changer une partie donc en reprenant ses attributs : id, nom, type, competences.
+Si on veut modifier son nom uniquement, on peut mettre uniquement : 
+
+```
+{
+"nom": "nouveauNom",
+}
+```
+
+#### DELETE - Supprimer
+
+Pour supprimer, il faut simplement être sur la route avec l'identifiant de notre objet qu'on veut supprimer et c'est tout.
 
 ## Lancement du client
 
 /!\ **Pour informations, le client n'est pas entièrement développé.** /!\
 
-Avant d'accèder à l'interface client, il faut avoir préalablement installé l'extension Allow CORS: Access-Control-Allow-Origin qui permet d'activer CORS. Dans le cas contraire, il n'est pas possible de faire fonctionner l'interface.
+Avant d'accèder à l'interface client, il faut avoir préalablement installé l'extension Allow CORS : Access-Control-Allow-Origin qui permet d'activer CORS. Dans le cas contraire, il n'est pas possible de faire fonctionner l'interface.
 
 Extension Google Chrome [ici](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf)
 
 Extension Mozilla Firefox [ici](https://addons.mozilla.org/en-US/firefox/addon/access-control-allow-origin/)
+(Malheureusement, elle ne marche pas dans mon cas. Je ne sais pas pourquoi.)
 
 Se placer dans le répertoire nodejs-client, et ouvrer dans le navigateur le fichier index.html avec le Absolute Path.
 
